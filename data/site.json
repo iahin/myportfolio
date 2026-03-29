@@ -6,8 +6,8 @@
     "links": [
       { "label": "Portfolio", "href": "#top" },
       { "label": "Projects", "href": "#projects" },
-      { "label": "Timeline", "href": "./experience.html" },
-      { "label": "Contact", "href": "./contact.html" }
+      { "label": "Timeline", "href": "#experience" },
+      { "label": "Contact", "href": "#contact" }
     ],
     "cta": {
       "label": "Hire the Engineer",
@@ -70,8 +70,8 @@
         "image": "./assets/images/profile-placeholder.svg",
         "imageAlt": "Analytics dashboard",
         "link": {
-          "label": "Explore Repository",
-          "href": "#"
+          "label": "View Case Study",
+          "href": "./project.html"
         }
       },
       {
@@ -79,13 +79,24 @@
         "title": "Cloud Ledger Core",
         "description": "Immutable infrastructure-as-code patterns for highly regulated fintech environments.",
         "tags": ["Terraform", "AWS"],
-        "code": "const cluster = new Cluster({\n  nodeCount: 12,\n  region: 'us-east-1',\n  scaling: 'auto-optimized'\n});"
+        "image": "./assets/images/profile-placeholder.svg",
+        "imageAlt": "Cloud infrastructure blueprint",
+        "link": {
+          "label": "View Case Study",
+          "href": "./project.html"
+        }
       },
       {
         "layout": "tile",
         "title": "Architectural Component Library",
         "description": "A headless UI library optimized for performance-critical dashboards with zero-bundle-size footprint for core logic.",
-        "tags": ["React", "TypeScript"]
+        "tags": ["React", "TypeScript"],
+        "image": "./assets/images/profile-placeholder.svg",
+        "imageAlt": "Component library interface preview",
+        "link": {
+          "label": "View Case Study",
+          "href": "./project.html"
+        }
       }
     ]
   },

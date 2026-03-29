@@ -1,18 +1,15 @@
+import { fetchSiteData } from "../shared/site-data.js";
+import { renderError, setText, bindLink } from "../shared/dom.js";
+
 const projectRoot = document.querySelector("#project-app");
 const projectTemplate = document.querySelector("#project-template");
 
 async function loadProjectPage() {
   try {
-    const response = await fetch("./data/site.json");
-
-    if (!response.ok) {
-      throw new Error(`Failed to load site data: ${response.status}`);
-    }
-
-    const data = await response.json();
+    const data = await fetchSiteData();
     renderProjectPage(data);
   } catch (error) {
-    renderProjectError(error);
+    renderError(projectRoot, "Project data could not be loaded.", error);
   }
 }
 
@@ -20,8 +17,8 @@ function renderProjectPage(data) {
   const fragment = projectTemplate.content.cloneNode(true);
   const detail = data.projectDetail;
 
-  fragment.querySelector('[data-field="brandName"]').textContent = data.site.brand;
-  fragment.querySelector('[data-field="brandNameFooter"]').textContent = data.site.brand;
+  setText(fragment, "brandName", data.site.brand);
+  setText(fragment, "brandNameFooter", data.site.brand);
 
   const avatar = fragment.querySelector('[data-field="avatarImage"]');
   avatar.src = detail.avatar.image;
@@ -30,13 +27,18 @@ function renderProjectPage(data) {
   const navRoot = fragment.querySelector('[data-field="navLinks"]');
   data.navigation.links.forEach((item) => {
     const link = document.createElement("a");
-    link.href = item.href.startsWith("#") ? `./index.html${item.href}` : item.href;
+    let href = item.href;
+
+    if (item.href.startsWith("#")) {
+      href = `./index.html${item.href}`;
+    }
+
+    link.href = href;
     link.textContent = item.label;
     link.className = item.label === "Projects" ? "nav-link active" : "nav-link";
     navRoot.append(link);
   });
 
-  setText(fragment, "detailKicker", detail.kicker);
   setText(fragment, "detailTitle", detail.title);
   setText(fragment, "detailSummary", detail.summary);
   setText(fragment, "detailRole", detail.role);
@@ -52,8 +54,6 @@ function renderProjectPage(data) {
   setText(fragment, "challengeText", detail.challenge.text);
   setText(fragment, "solutionTitle", detail.solution.title);
   setText(fragment, "solutionText", detail.solution.text);
-
-  setText(fragment, "blueprintKicker", detail.blueprint.kicker);
   setText(fragment, "blueprintTitle", detail.blueprint.title);
   setText(fragment, "blueprintSummary", detail.blueprint.summary);
 
@@ -107,26 +107,6 @@ function renderProjectPage(data) {
   });
 
   projectRoot.replaceChildren(fragment);
-}
-
-function setText(fragment, field, value) {
-  fragment.querySelector(`[data-field="${field}"]`).textContent = value;
-}
-
-function bindLink(element, data) {
-  element.href = data.href;
-  element.textContent = data.label;
-}
-
-function renderProjectError(error) {
-  const message = document.createElement("section");
-  message.className = "error-state";
-  message.innerHTML = `
-    <h2>Project data could not be loaded.</h2>
-    <p>${error.message}</p>
-  `;
-
-  projectRoot.replaceChildren(message);
 }
 
 loadProjectPage();

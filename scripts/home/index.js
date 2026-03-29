@@ -1,0 +1,32 @@
+import { fetchSiteData } from "../shared/site-data.js";
+import { renderError } from "../shared/dom.js";
+import { attachNavigationState, renderNavigation } from "./navigation.js";
+import { renderHero } from "./hero.js";
+import { renderProjects } from "./projects.js";
+import { renderExperience } from "./experience.js";
+
+const contentRoot = document.querySelector("#app");
+const template = document.querySelector("#portfolio-template");
+
+async function loadPortfolio() {
+  try {
+    const data = await fetchSiteData();
+    renderPortfolio(data);
+  } catch (error) {
+    renderError(contentRoot, "Portfolio data could not be loaded.", error);
+  }
+}
+
+function renderPortfolio(data) {
+  const fragment = template.content.cloneNode(true);
+
+  renderNavigation(fragment, data);
+  renderHero(fragment, data);
+  renderProjects(fragment, data);
+  renderExperience(fragment, data);
+
+  contentRoot.replaceChildren(fragment);
+  attachNavigationState(contentRoot);
+}
+
+loadPortfolio();

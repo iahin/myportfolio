@@ -6,16 +6,10 @@ Static portfolio site for GitHub Pages.
 
 - `index.html`: page structure
 - `project.html`: project case study page
-- `experience.html`: experience timeline page
-- `contact.html`: contact page
-- `styles.css`: site styling
-- `project-styles.css`: project detail page styling
-- `experience-styles.css`: experience page styling
-- `contact-styles.css`: contact page styling
-- `script.js`: loads local JSON and renders the front page
-- `project-script.js`: loads local JSON and renders the project detail page
-- `experience-script.js`: loads local JSON and renders the experience page
-- `contact-script.js`: loads local JSON and renders the contact page
+- `styles.css`: shared styling for all pages
+- `scripts/home/`: front page modules by section
+- `scripts/pages/`: page entry scripts
+- `scripts/shared/`: shared fetch and DOM helpers
 - `data/site.json`: local content source
 - `assets/images/`: local image assets
 - `assets/fonts/`: optional local font files

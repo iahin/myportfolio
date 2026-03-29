@@ -7,7 +7,7 @@
   <title>Portfolio</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
+<body class="home-page">
   <main id="app" aria-live="polite">
     <section class="loading-state">
       <p>Loading portfolio content...</p>
@@ -18,9 +18,7 @@
     <div class="page-shell">
       <nav class="top-nav">
         <div class="top-nav-inner">
-          <a class="brand" data-field="brandName" href="./index.html">Portfolio</a>
           <div class="nav-links" data-field="navLinks"></div>
-          <a class="nav-cta" data-field="navCta">Hire the Engineer</a>
         </div>
       </nav>
 
@@ -31,11 +29,6 @@
       <section id="top" class="hero-section">
         <div class="hero-grid">
           <div class="hero-copy">
-            <div class="eyebrow-row">
-              <span class="eyebrow-line"></span>
-              <p class="eyebrow" data-field="heroEyebrow"></p>
-            </div>
-
             <h1 class="hero-title">
               <span data-field="heroTitlePrefix"></span>
               <span class="hero-title-strong" data-field="heroTitleStrong"></span>
@@ -45,11 +38,6 @@
               <p class="hero-summary" data-field="heroSummary"></p>
 
               <div class="hero-stats" data-field="heroStats"></div>
-
-              <div class="hero-actions">
-                <a class="text-link" data-field="primaryLink"></a>
-                <a class="text-link muted" data-field="secondaryLink"></a>
-              </div>
             </div>
           </div>
 
@@ -82,48 +70,52 @@
         </div>
       </section>
 
-      <section class="marquee-section">
-        <div class="marquee-track" data-field="marqueeItems"></div>
-      </section>
-
       <section id="projects" class="projects-section">
         <header class="projects-header">
           <div class="projects-header-copy">
-            <span class="section-kicker" data-field="projectsKicker"></span>
             <h2 class="projects-title">
               <span data-field="projectsTitle"></span>
               <span class="projects-title-muted" data-field="projectsTitleMuted"></span>
             </h2>
             <p class="projects-summary" data-field="projectsSummary"></p>
           </div>
-          <div class="project-filters" data-field="projectFilters"></div>
         </header>
 
         <div class="projects-grid" data-field="projectsGrid"></div>
       </section>
 
-      <section class="cta-section">
-        <div class="cta-panel">
-          <div class="cta-copy">
-            <h2 class="cta-title" data-field="ctaTitle"></h2>
-            <p class="cta-summary" data-field="ctaSummary"></p>
+      <section id="experience" class="timeline-page-section">
+        <header class="timeline-hero">
+          <div class="timeline-hero-grid">
+            <div class="timeline-hero-copy">
+              <h2 class="timeline-title">
+                <span data-field="experienceTitle"></span>
+                <span class="timeline-title-muted" data-field="experienceTitleMuted"></span>
+              </h2>
+            </div>
+            <div class="timeline-summary-shell">
+              <p class="timeline-summary" data-field="experienceSummary"></p>
+            </div>
           </div>
-          <div class="cta-actions">
-            <a class="cta-button cta-button-primary" data-field="ctaPrimary"></a>
-            <a class="cta-button cta-button-secondary" data-field="ctaSecondary"></a>
-          </div>
+        </header>
+        <div class="timeline-section">
+          <div class="timeline-line" aria-hidden="true"></div>
+          <div class="timeline-list" data-field="timelineEntries"></div>
         </div>
       </section>
 
-      <footer id="contact" class="site-footer">
-        <div class="footer-inner">
-          <p class="footer-version" data-field="footerText"></p>
-          <div class="footer-links" data-field="footerLinks"></div>
+      <section id="contact" class="timeline-cta">
+        <div class="timeline-cta-panel">
+          <div class="timeline-cta-copy">
+            <h3 data-field="experienceCtaTitle"></h3>
+            <p data-field="experienceCtaSummary"></p>
+          </div>
+          <div class="timeline-contact-links" data-field="experienceContactChannels"></div>
         </div>
-      </footer>
+      </section>
     </div>
   </template>
 
-  <script src="./script.js" defer></script>
+  <script type="module" src="./scripts/home/index.js"></script>
 </body>
 </html>
