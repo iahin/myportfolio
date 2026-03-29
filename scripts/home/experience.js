@@ -29,9 +29,6 @@ export function renderExperience(fragment, data) {
   const experienceTitle = fragment.querySelector('[data-field="experienceTitle"]');
   if (experienceTitle) experienceTitle.textContent = experience.title;
 
-  const experienceTitleMuted = fragment.querySelector('[data-field="experienceTitleMuted"]');
-  if (experienceTitleMuted) experienceTitleMuted.textContent = experience.titleMuted;
-
   const experienceSummary = fragment.querySelector('[data-field="experienceSummary"]');
   if (experienceSummary) experienceSummary.textContent = experience.summary;
 

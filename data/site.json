@@ -10,10 +10,12 @@
   },
   "navigation": {
     "links": [
-      { "label": "Portfolio", "href": "#top" },
+      { "label": "Intro", "href": "#top" },
       { "label": "Projects", "href": "#projects" },
-      { "label": "Timeline", "href": "#experience" },
-      { "label": "Contact", "href": "#contact" }
+      { "label": "Experiences", "href": "#experience" },
+      { "label": "Research Papers", "href": "#research" },
+      { "label": "Tech Stacks", "href": "#skills" },
+      { "label": "Contact Me", "href": "#contact" }
     ],
     "cta": {
       "label": "Hire the Engineer",
@@ -53,8 +55,7 @@
   ],
   "projectsOverview": {
     "kicker": "Selected Works",
-    "title": "Core",
-    "titleMuted": "Capabilities.",
+    "title": "Core Capabilities",
     "summary": "These are the strengths I bring to a team: backend depth, full-stack execution, cloud delivery, and applied AI integration shaped by production systems, operator-facing workflows, and the reality of shipping useful software under constraints.",
     "filters": ["All Systems", "Backend", "Infrastructure", "Full-Stack"],
     "projects": [
@@ -105,6 +106,70 @@
           "label": "View Capability Details",
           "href": "./project.html"
         }
+      }
+    ]
+  },
+  "skillsOverview": {
+    "title": "Working Stack",
+    "summary": "The stack I reach for is shaped by delivery, not trend-chasing: strong backend foundations, practical full-stack execution, and AI tooling used where it genuinely improves the product.",
+    "groups": [
+      {
+        "title": "Languages & Frameworks",
+        "summary": "My core day-to-day development tools across backend and full-stack work.",
+        "items": [
+          { "label": "Python", "icon": "python" },
+          { "label": "FastAPI", "icon": "fastapi" },
+          { "label": "Django", "icon": "django" },
+          { "label": "JavaScript", "icon": "javascript" },
+          { "label": "TypeScript", "icon": "typescript" },
+          { "label": "Node.js", "icon": "nodejs" },
+          { "label": "Next.js", "icon": "nextjs" }
+        ]
+      },
+      {
+        "title": "Backend & APIs",
+        "summary": "Architectures and integration patterns I use to build reliable application services.",
+        "items": [
+          { "label": "REST APIs", "icon": "api" },
+          { "label": "Microservices", "icon": "microservices" },
+          { "label": "JWT Auth", "icon": "security" },
+          { "label": "Backend Architecture", "icon": "architecture" },
+          { "label": "QDrant", "icon": "qdrant" },
+          { "label": "NVIDIA NIM", "icon": "nvidia" }
+        ]
+      },
+      {
+        "title": "Databases & Delivery",
+        "summary": "Data and deployment tooling used to keep systems fast, stable, and operable.",
+        "items": [
+          { "label": "PostgreSQL", "icon": "postgresql" },
+          { "label": "Microsoft SQL Server", "icon": "sql" },
+          { "label": "MongoDB", "icon": "mongodb" },
+          { "label": "Redis", "icon": "redis" },
+          { "label": "Query Optimisation", "icon": "query" },
+          { "label": "Docker", "icon": "docker" },
+          { "label": "GitHub Actions", "icon": "github" },
+          { "label": "AWS", "icon": "aws" },
+          { "label": "Azure VMs", "icon": "azure" },
+          { "label": "CI/CD", "icon": "cicd" }
+        ]
+      },
+      {
+        "title": "AI & Frontend",
+        "summary": "Applied AI and product-layer tools I use when the system needs a complete end-to-end implementation.",
+        "items": [
+          { "label": "OpenAI API", "icon": "openai" },
+          { "label": "LangChain", "icon": "langchain" },
+          { "label": "RAG workflows", "icon": "rag" },
+          { "label": "Prompt Engineering", "icon": "prompt" },
+          { "label": "NLP", "icon": "nlp" },
+          { "label": "PyTorch", "icon": "pytorch" },
+          { "label": "Huggingface", "icon": "huggingface" },
+          { "label": "React", "icon": "react" },
+          { "label": "Tailwind CSS", "icon": "tailwind" },
+          { "label": "HTML", "icon": "html" },
+          { "label": "CSS", "icon": "css" }
+        ]
       }
     ]
   },
@@ -222,8 +287,7 @@
   },
   "experience": {
     "kicker": "Chronicle of Growth",
-    "title": "Experience",
-    "titleMuted": "Timeline",
+    "title": "Experience Timeline",
     "summary": "This timeline shows the kind of engineer I have become: someone trusted to step into complex domains, understand the operational reality, and turn that into software that ships, stabilises, and keeps delivering value.",
     "avatar": {
       "image": "./assets/images/profile-placeholder.svg",
@@ -309,37 +373,51 @@
           "Engineered a secure image and data upload pipeline using Multer and socket services, enabling encrypted biometric and document data transmission from mobile devices to backend servers."
         ],
         "tags": ["Node.js", "Express", "MongoDB", ".NET", "Biometrics"]
+      }
+    ]
+  },
+  "researchOverview": {
+    "title": "Research Published",
+    "summary": "My published work tracks the same pattern as my engineering: practical machine learning, digital forensics, and cybercrime analysis shaped around problems that need to hold up outside the lab.",
+    "items": [
+      {
+        "title": "Optimization Techniques for Dealing with Small Dataset for Sentiment Analysis",
+        "publisher": "JAIT",
+        "date": "September 2025",
+        "accent": "primary",
+        "authorship": "Main Author",
+        "href": "https://www.jait.us/show-258-1747-1.html"
       },
       {
-        "period": "2016 - 2020",
-        "role": "B.Eng. Software Engineering (Honors)",
-        "company": "Singapore Institute of Technology, Singapore",
-        "accent": "tertiary",
-        "marker": "EDU",
-        "summary": "Completed a Bachelor of Engineering in Software Engineering with honors, establishing a strong foundation in software architecture, backend systems, and production-focused engineering.",
-        "points": [
-          "Completed a Bachelor of Engineering in Software Engineering with honors, building the technical foundation for backend systems, software architecture, and production engineering."
-        ],
-        "tags": ["Software Engineering", "Honors"]
+        "title": "Investigating Patterns of Adversarial Techniques for Cyberattack Forensics",
+        "publisher": "IEEE",
+        "date": "December 2024",
+        "accent": "light",
+        "authorship": "Co-author",
+        "href": "https://ieeexplore.ieee.org/abstract/document/10945105"
       },
       {
-        "period": "2012 - 2015",
-        "role": "Diploma in Computer Engineering",
-        "company": "Singapore Polytechnic",
-        "accent": "secondary",
-        "marker": "EDU",
-        "summary": "Completed a diploma in Computer Engineering, building early grounding in computing systems, software development, and engineering fundamentals.",
-        "points": [
-          "Completed a diploma in Computer Engineering with early grounding in computing systems, software development, and engineering fundamentals."
-        ],
-        "tags": ["Computer Engineering", "Diploma"]
+        "title": "Smart Cybercrime Classification for Digital Forensics with Small Datasets",
+        "publisher": "Springer",
+        "date": "June 2022",
+        "accent": "light",
+        "authorship": "Main Author",
+        "href": "https://link.springer.com/chapter/10.1007/978-3-031-07689-3_21"
+      },
+      {
+        "title": "Clustering Massive-Categories and Complex Documents via Graph Convolutional Network",
+        "publisher": "Springer",
+        "date": "August 2021",
+        "accent": "light",
+        "authorship": "Co-author",
+        "href": "https://link.springer.com/chapter/10.1007/978-3-030-82136-4_3"
       }
     ]
   },
   "contactPage": {
     "cta": {
-      "title": "Ready to build the next iteration?",
-      "summary": "If you are hiring for someone who can own backend and full-stack delivery, work comfortably with AI-enabled systems, and bring calm execution to high-stakes environments, I would be glad to speak."
+      "title": "Let's discuss an opportunity",
+      "summary": "Whether you are hiring for a full-time role, building a product, or need help turning an idea into working software, I am open to the right conversation."
     },
     "channels": [
       {

@@ -3,7 +3,9 @@ import { renderError } from "../shared/dom.js";
 import { attachNavigationState, renderNavigation } from "./navigation.js";
 import { renderHero } from "./hero.js";
 import { renderProjects } from "./projects.js";
+import { renderSkills } from "./skills.js";
 import { renderExperience } from "./experience.js";
+import { renderResearch } from "./research.js";
 
 const contentRoot = document.querySelector("#app");
 const template = document.querySelector("#portfolio-template");
@@ -32,7 +34,9 @@ function renderPortfolio(data) {
   renderNavigation(fragment, data);
   renderHero(fragment, data);
   renderProjects(fragment, data);
+  renderSkills(fragment, data);
   renderExperience(fragment, data);
+  renderResearch(fragment, data);
 
   contentRoot.replaceChildren(fragment);
   attachNavigationState(contentRoot);

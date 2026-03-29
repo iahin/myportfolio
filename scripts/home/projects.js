@@ -10,9 +10,6 @@ export function renderProjects(fragment, data) {
   const projectsTitle = fragment.querySelector('[data-field="projectsTitle"]');
   if (projectsTitle) projectsTitle.textContent = data.projectsOverview.title;
 
-  const projectsTitleMuted = fragment.querySelector('[data-field="projectsTitleMuted"]');
-  if (projectsTitleMuted) projectsTitleMuted.textContent = data.projectsOverview.titleMuted;
-
   const projectsSummary = fragment.querySelector('[data-field="projectsSummary"]');
   if (projectsSummary) projectsSummary.textContent = data.projectsOverview.summary;
 
