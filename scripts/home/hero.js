@@ -1,10 +1,4 @@
 export function renderHero(fragment, data) {
-  const heroStatusLabel = fragment.querySelector('[data-field="heroStatusLabel"]');
-  if (heroStatusLabel) heroStatusLabel.textContent = data.hero.statusLabel;
-
-  const heroQuoteLabel = fragment.querySelector('[data-field="heroQuoteLabel"]');
-  if (heroQuoteLabel) heroQuoteLabel.textContent = data.hero.quoteLabel;
-
   const heroTitlePrefix = fragment.querySelector('[data-field="heroTitlePrefix"]');
   if (heroTitlePrefix) heroTitlePrefix.textContent = data.hero.titlePrefix;
 
@@ -13,12 +7,6 @@ export function renderHero(fragment, data) {
 
   const heroSummary = fragment.querySelector('[data-field="heroSummary"]');
   if (heroSummary) heroSummary.textContent = data.hero.summary;
-
-  const heroQuote = fragment.querySelector('[data-field="heroQuote"]');
-  if (heroQuote) heroQuote.textContent = data.hero.quote;
-
-  const heroBadge = fragment.querySelector('[data-field="heroBadge"]');
-  if (heroBadge) heroBadge.innerHTML = data.hero.badge;
 
   const heroImage = fragment.querySelector('[data-field="heroImage"]');
   if (heroImage) {

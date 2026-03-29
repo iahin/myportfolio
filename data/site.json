@@ -11,10 +11,10 @@
   "navigation": {
     "links": [
       { "label": "Intro", "href": "#top" },
-      { "label": "Projects", "href": "#projects" },
-      { "label": "Experiences", "href": "#experience" },
-      { "label": "Research Papers", "href": "#research" },
+      { "label": "Showcase", "href": "#projects" },
+      { "label": "Experience", "href": "#experience" },
       { "label": "Tech Stacks", "href": "#skills" },
+      { "label": "Research Papers", "href": "#research" },
       { "label": "Contact Me", "href": "#contact" }
     ],
     "cta": {
@@ -24,40 +24,20 @@
   },
   "hero": {
     "eyebrow": "Systems Architect & Humanist",
-    "titlePrefix": "Isfaque AL Kaderi Tuhin.",
-    "titleStrong": "Senior Software Engineer.",
-    "summary": "I build software that turns messy operational problems into reliable products people can actually use. My work sits across backend, full-stack, cloud, and applied AI delivery, especially where teams need practical systems, production discipline, and AI features that solve real workflow problems instead of adding noise.",
-    "quote": "\"Production systems should stay readable under real operational pressure.\"",
-    "badge": "Senior <br>Software <br>Engineer",
-    "statusLabel": "Production Ready",
-    "quoteLabel": "Engineering Philosophy",
-    "image": "./assets/images/profile-placeholder.svg",
-    "imageAlt": "Engineer portrait",
+    "titlePrefix": "Hello, I'm Iz!",
+    "titleStrong": "I am a Software Engineer.",
+    "summary": "I build software that turns messy operational problems into reliable products people can actually use. I work across full-stack, cloud, and applied AI, helping teams build practical, production-ready systems and useful AI capabilities that improve real workflows. Usually with coffee nearby ☕︎",
+    "image": "./assets/images/hero_image.jpg",
+    "imageAlt": "Workspace desk with laptop and development environment",
     "stats": [
-      { "label": "Experience", "value": "05+", "unit": "Yrs" },
-      { "label": "Citizenship", "value": "SG", "unit": "Citizen" }
-    ],
-    "primaryLink": {
-      "label": "Explore Projects",
-      "href": "#projects"
-    },
-    "secondaryLink": {
-      "label": "View Github",
-      "href": "./contact.html"
-    }
+      { "label": "Location", "value": "SG", "unit": "" },
+      { "label": "Years Experience", "value": "5+", "unit": "" },
+      { "label": "Solutions Built", "value": "8+", "unit": "" }
+    ]
   },
-  "marquee": [
-    "Distributed Systems",
-    "Cloud Architecture",
-    "Full Stack Craft",
-    "Human-Centric UI",
-    "Micro-Services"
-  ],
   "projectsOverview": {
-    "kicker": "Selected Works",
-    "title": "Core Capabilities",
-    "summary": "These are the strengths I bring to a team: backend depth, full-stack execution, cloud delivery, and applied AI integration shaped by production systems, operator-facing workflows, and the reality of shipping useful software under constraints.",
-    "filters": ["All Systems", "Backend", "Infrastructure", "Full-Stack"],
+    "title": "Showcase",
+    "summary": "A selection of systems, tools, and platforms built across company and personal work, grounded in practical engineering, real operational contexts, and software that supports real users and real workflows.",
     "projects": [
       {
         "layout": "featured",
@@ -110,8 +90,8 @@
     ]
   },
   "skillsOverview": {
-    "title": "Working Stack",
-    "summary": "The stack I reach for is shaped by delivery, not trend-chasing: strong backend foundations, practical full-stack execution, and AI tooling used where it genuinely improves the product.",
+    "title": "Tech Stacks",
+    "summary": "",
     "groups": [
       {
         "title": "Languages & Frameworks",
@@ -123,7 +103,11 @@
           { "label": "JavaScript", "icon": "javascript" },
           { "label": "TypeScript", "icon": "typescript" },
           { "label": "Node.js", "icon": "nodejs" },
-          { "label": "Next.js", "icon": "nextjs" }
+          { "label": "Next.js", "icon": "nextjs" },
+          { "label": "React", "icon": "react" },
+          { "label": "Tailwind CSS", "icon": "tailwind" },
+          { "label": "HTML", "icon": "html" },
+          { "label": "CSS", "icon": "css" }
         ]
       },
       {
@@ -134,8 +118,8 @@
           { "label": "Microservices", "icon": "microservices" },
           { "label": "JWT Auth", "icon": "security" },
           { "label": "Backend Architecture", "icon": "architecture" },
-          { "label": "QDrant", "icon": "qdrant" },
-          { "label": "NVIDIA NIM", "icon": "nvidia" }
+          { "label": "Nginx", "icon": "nginx" },
+          { "label": "QDrant", "icon": "qdrant" }
         ]
       },
       {
@@ -163,12 +147,9 @@
           { "label": "RAG workflows", "icon": "rag" },
           { "label": "Prompt Engineering", "icon": "prompt" },
           { "label": "NLP", "icon": "nlp" },
+          { "label": "NVIDIA NIM", "icon": "nvidia" },
           { "label": "PyTorch", "icon": "pytorch" },
-          { "label": "Huggingface", "icon": "huggingface" },
-          { "label": "React", "icon": "react" },
-          { "label": "Tailwind CSS", "icon": "tailwind" },
-          { "label": "HTML", "icon": "html" },
-          { "label": "CSS", "icon": "css" }
+          { "label": "Huggingface", "icon": "huggingface" }
         ]
       }
     ]
@@ -186,7 +167,6 @@
     }
   },
   "projectDetail": {
-    "kicker": "Project Case Study",
     "title": "Senior Software Engineer Profile",
     "summary": "I am at my strongest when a team needs someone who can take ownership from architecture through deployment, especially in systems that combine backend engineering, practical full-stack delivery, and AI-enabled workflows that must stay secure, maintainable, and useful to real operators from day one.",
     "role": "Senior Software Engineer",
@@ -225,7 +205,6 @@
       "text": "I work as a hands-on engineer first: aligning with stakeholders quickly, shaping the right architecture, and then building the system end to end until it is stable enough to earn trust in production. Where AI is useful, I integrate it pragmatically into the workflow instead of treating it as a separate demo layer."
     },
     "blueprint": {
-      "kicker": "Infrastructure & Tooling",
       "title": "Technical Focus Areas",
       "summary": "A structured view of the main engineering areas covered across recent work.",
       "cards": [
@@ -237,7 +216,7 @@
         {
           "icon": "API",
           "label": "Backend & APIs",
-          "value": "REST APIs, Microservices, JWT Auth, Backend Architecture, Qdrant, NVIDIA NIM"
+          "value": "REST APIs, Microservices, JWT Auth, Backend Architecture, Qdrant"
         },
         {
           "icon": "DB",
@@ -286,9 +265,8 @@
     }
   },
   "experience": {
-    "kicker": "Chronicle of Growth",
     "title": "Experience Timeline",
-    "summary": "This timeline shows the kind of engineer I have become: someone trusted to step into complex domains, understand the operational reality, and turn that into software that ships, stabilises, and keeps delivering value.",
+    "summary": "This timeline reflects a pattern in my work, stepping into unfamiliar domains, understanding how things actually operate, and turning that into software that people can rely on.",
     "avatar": {
       "image": "./assets/images/profile-placeholder.svg",
       "alt": "Engineer avatar"
@@ -299,7 +277,6 @@
         "role": "Research Engineer (Full-Stack AI Engineer)",
         "company": "SIT X NVIDIA AI Centre (SNAIC), Singapore",
         "accent": "primary",
-        "marker": "CHK",
         "summary": "Leading full-stack AI delivery across both the official SNAIC website and a production RAG-based chatbot platform, combining web engineering, applied AI integration, CI/CD automation, and AWS infrastructure foundations for industry-facing systems.",
         "points": [
           "Lead developer of the official SNAIC website, developed using Next.js, TypeScript, Prisma, Contentful, and AWS Amplify, reducing content maintenance effort by about 60% and strengthening external visibility for the centre.",
@@ -315,7 +292,6 @@
         "role": "Research Engineer (Full-Stack Developer)",
         "company": "Singapore Institute of Technology, Singapore",
         "accent": "secondary",
-        "marker": "CHK",
         "summary": "Built and deployed AiDiSA for SMRT as an end-to-end analytics platform combining backend APIs, full-stack portal delivery, transformer-based NLP pipelines, and GPT-powered workflow automation for operational teams.",
         "points": [
           "Built and deployed AiDiSA, an end-to-end operational analytics platform for SMRT that automated commuter-feedback triage, case assignment, and real-time incident alerting across email, webforms, and internal systems.",
@@ -331,7 +307,6 @@
         "role": "Software Engineer",
         "company": "NEC Asia Pacific Pte Ltd, Singapore",
         "accent": "tertiary",
-        "marker": "CHK",
         "summary": "Delivered secure backend features and automation for Singapore immigration systems, improving onboarding workflows, dashboard performance, production stability, and stakeholder acceptance in a regulated environment.",
         "points": [
           "Developed a secure user onboarding module for Singapore immigration systems, integrating third-party biometric APIs and government identity services under strict security and access-control constraints.",
@@ -347,7 +322,6 @@
         "role": "Software Engineer",
         "company": "Singapore Institute of Technology, Singapore",
         "accent": "primary",
-        "marker": "CHK",
         "summary": "Led full-stack engineering for the SLADE digital forensics system, combining modular backend services, large-scale data processing, graph analytics, and hybrid-environment deployment automation.",
         "points": [
           "Led full-stack development of the SLADE system, architecting a modular backend that integrated log parsing, forensic data cleaning, knowledge graph generation, and threat intelligence enrichment for real-time digital crime investigations.",
@@ -363,7 +337,6 @@
         "role": "Application Developer",
         "company": "IDEMIA, Singapore",
         "accent": "secondary",
-        "marker": "CHK",
         "summary": "Built a full-stack visitor management proof of concept integrating biometric hardware, secure backend APIs, and cross-platform clients for public security use cases across the APAC team.",
         "points": [
           "Developed a full-stack proof-of-concept visitor management system, combining an Android app and a .NET app connected through a Node.js and Express backend with MongoDB, deployed for the public security APAC team.",
@@ -378,7 +351,7 @@
   },
   "researchOverview": {
     "title": "Research Published",
-    "summary": "My published work tracks the same pattern as my engineering: practical machine learning, digital forensics, and cybercrime analysis shaped around problems that need to hold up outside the lab.",
+    "summary": "",
     "items": [
       {
         "title": "Optimization Techniques for Dealing with Small Dataset for Sentiment Analysis",

@@ -1,33 +1,3 @@
-@font-face {
-  font-family: "Inter";
-  src:
-    local("Inter"),
-    url("./assets/fonts/Inter-VariableFont_opsz,wght.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Manrope";
-  src:
-    local("Manrope"),
-    url("./assets/fonts/Manrope-VariableFont_wght.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 200 800;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Space Grotesk";
-  src:
-    local("Space Grotesk"),
-    url("./assets/fonts/SpaceGrotesk-VariableFont_wght.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 300 700;
-  font-display: swap;
-}
-
 :root {
   --surface: #f7f9fb;
   --surface-dim: #edf2f5;
@@ -272,8 +242,6 @@ img {
 
 .eyebrow,
 .hero-stat-label,
-.feature-kicker,
-.section-kicker,
 .quote-label,
 .footer-version,
 .marquee-item {
@@ -290,7 +258,7 @@ img {
 }
 
 .hero-title {
-  max-width: 11ch;
+  max-width: 16ch;
   margin: 0;
   color: var(--on-surface);
   font-family: "Inter", "Segoe UI", sans-serif;
@@ -302,8 +270,9 @@ img {
 }
 
 .hero-title-strong {
-  display: inline;
+  display: block;
   color: var(--primary);
+  font-size: 0.75em;
 }
 
 .hero-body {
@@ -579,15 +548,6 @@ img {
 
 .projects-header-copy {
   max-width: 42rem;
-}
-
-.section-kicker {
-  display: block;
-  margin-bottom: 1rem;
-  color: var(--primary);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
 }
 
 .projects-title,

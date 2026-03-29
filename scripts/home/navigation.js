@@ -38,10 +38,30 @@ export function attachNavigationState(root = document) {
   const sections = sectionLinks
     .map((link) => document.querySelector(link.dataset.sectionHref))
     .filter(Boolean);
+  let pendingHref = null;
+  let pendingUntil = 0;
 
   links.forEach((link) => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", (event) => {
       const href = link.dataset.sectionHref || link.getAttribute("href");
+      if (href?.startsWith("#")) {
+        const target = document.querySelector(href);
+        if (target) {
+          event.preventDefault();
+          pendingHref = href;
+          pendingUntil = Date.now() + 1200;
+          setActiveLink(links, href);
+          requestAnimationFrame(() => setActiveLink(links, href));
+
+          const navOffset = parseFloat(
+            getComputedStyle(document.documentElement).getPropertyValue("--nav-offset")
+          ) || 0;
+          const top = Math.max(0, target.offsetTop - navOffset + 2);
+          window.scrollTo({ top, behavior: "smooth" });
+          window.history.replaceState(null, "", href);
+          return;
+        }
+      }
       setActiveLink(links, href);
     });
   });
@@ -84,6 +104,22 @@ export function attachNavigationState(root = document) {
       scrollBottom >= lastSection.offsetTop + Math.min(lastSection.offsetHeight * 0.25, 160)
     ) {
       activeSection = lastSection;
+    }
+
+    if (pendingHref && Date.now() < pendingUntil) {
+      const pendingSection = document.querySelector(pendingHref);
+      if (pendingSection) {
+        const pendingTop = pendingSection.offsetTop - navOffset;
+        if (Math.abs(window.scrollY - pendingTop) > 20) {
+          setActiveLink(links, pendingHref);
+          return;
+        }
+      }
+      pendingHref = null;
+      pendingUntil = 0;
+    } else if (pendingHref) {
+      pendingHref = null;
+      pendingUntil = 0;
     }
 
     if (activeSection?.id) {
