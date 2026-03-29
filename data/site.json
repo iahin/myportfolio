@@ -1,0 +1,57 @@
+{
+  "hero": {
+    "eyebrow": "Portfolio 2026",
+    "name": "Your Name",
+    "tagline": "Designer, developer, and problem-solver building useful digital products.",
+    "summary": "This front page is driven by local JSON so you can update your bio, projects, and contact details without adding a database or external CMS.",
+    "focus": "Shipping a fast portfolio site on GitHub Pages with local content and image assets.",
+    "image": "./assets/images/profile-placeholder.svg",
+    "imageAlt": "Abstract placeholder portrait",
+    "primaryLink": {
+      "label": "Browse projects",
+      "href": "#projects"
+    },
+    "secondaryLink": {
+      "label": "About me",
+      "href": "#about"
+    }
+  },
+  "highlights": [
+    {
+      "title": "Local content",
+      "description": "Homepage content is loaded from `data/site.json`, which keeps the site easy to edit and version."
+    },
+    {
+      "title": "Static hosting",
+      "description": "The structure is plain HTML, CSS, and JavaScript, so it works cleanly with GitHub Pages."
+    },
+    {
+      "title": "Image folder",
+      "description": "Profile images and project thumbnails can live in `assets/images/` and be referenced directly in JSON."
+    }
+  ],
+  "projects": [
+    {
+      "title": "Project One",
+      "description": "Replace this with a real project summary, tech stack, and destination link when you are ready.",
+      "tags": ["Frontend", "Static Site"],
+      "link": {
+        "label": "Project details",
+        "href": "#"
+      }
+    },
+    {
+      "title": "Project Two",
+      "description": "Use this section for featured case studies, experiments, or client work you want to highlight.",
+      "tags": ["UI", "Portfolio"],
+      "link": {
+        "label": "Project details",
+        "href": "#"
+      }
+    }
+  ],
+  "contact": {
+    "email": "hello@example.com",
+    "label": "hello@example.com"
+  }
+}
