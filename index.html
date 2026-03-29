@@ -8,68 +8,120 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <div class="page-shell">
-    <header class="site-header">
-      <a class="brand" href="./index.html">Portfolio</a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-
-    <main id="app" class="content" aria-live="polite">
-      <section class="loading-state">
-        <p>Loading portfolio content...</p>
-      </section>
-    </main>
-  </div>
+  <main id="app" aria-live="polite">
+    <section class="loading-state">
+      <p>Loading portfolio content...</p>
+    </section>
+  </main>
 
   <template id="portfolio-template">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow" data-field="eyebrow"></p>
-        <h1 data-field="name"></h1>
-        <p class="hero-tagline" data-field="tagline"></p>
-        <p class="hero-summary" data-field="summary"></p>
-        <div class="hero-actions">
-          <a class="button button-primary" data-field="primaryLink">View Projects</a>
-          <a class="button button-secondary" data-field="secondaryLink">Contact</a>
+    <div class="page-shell">
+      <nav class="top-nav">
+        <div class="top-nav-inner">
+          <a class="brand" data-field="brandName" href="./index.html">Portfolio</a>
+          <div class="nav-links" data-field="navLinks"></div>
+          <a class="nav-cta" data-field="navCta">Hire the Engineer</a>
         </div>
-      </div>
+      </nav>
 
-      <aside class="hero-card">
-        <img class="profile-image" data-field="image" alt="">
-        <div class="hero-card-text">
-          <p class="card-label">Current focus</p>
-          <p class="card-value" data-field="focus"></p>
+      <div class="hero-backdrop micro-grid" aria-hidden="true"></div>
+      <div class="ambient ambient-left" aria-hidden="true"></div>
+      <div class="ambient ambient-right" aria-hidden="true"></div>
+
+      <section id="top" class="hero-section">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow-row">
+              <span class="eyebrow-line"></span>
+              <p class="eyebrow" data-field="heroEyebrow"></p>
+            </div>
+
+            <h1 class="hero-title">
+              <span data-field="heroTitlePrefix"></span>
+              <span class="hero-title-strong" data-field="heroTitleStrong"></span>
+            </h1>
+
+            <div class="hero-body">
+              <p class="hero-summary" data-field="heroSummary"></p>
+
+              <div class="hero-stats" data-field="heroStats"></div>
+
+              <div class="hero-actions">
+                <a class="text-link" data-field="primaryLink"></a>
+                <a class="text-link muted" data-field="secondaryLink"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-image-frame">
+              <img class="hero-image" data-field="heroImage" alt="">
+              <div class="hero-image-wash" aria-hidden="true"></div>
+              <div class="status-card">
+                <div class="status-head">
+                  <span>Kernel Status</span>
+                  <span class="status-dot"></span>
+                </div>
+                <div class="status-bar">
+                  <span class="status-fill"></span>
+                </div>
+              </div>
+              <div class="quote-card">
+                <span class="quote-label">System Core Architecture</span>
+                <p data-field="heroQuote"></p>
+              </div>
+              <svg class="schematic" viewBox="0 0 400 500" aria-hidden="true">
+                <line x1="50" y1="0" x2="50" y2="500"></line>
+                <circle cx="50" cy="120" r="3"></circle>
+                <line x1="0" y1="400" x2="400" y2="400"></line>
+                <circle cx="320" cy="400" r="3"></circle>
+              </svg>
+            </div>
+            <div class="badge" data-field="heroBadge"></div>
+          </div>
         </div>
-      </aside>
-    </section>
+      </section>
 
-    <section id="about" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">About</p>
-        <h2>Simple, local-data portfolio</h2>
-      </div>
-      <div class="about-grid" data-field="highlights"></div>
-    </section>
+      <section class="marquee-section">
+        <div class="marquee-track" data-field="marqueeItems"></div>
+      </section>
 
-    <section id="projects" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Projects</p>
-        <h2>Featured work</h2>
-      </div>
-      <div class="project-grid" data-field="projects"></div>
-    </section>
+      <section id="projects" class="projects-section">
+        <header class="projects-header">
+          <div class="projects-header-copy">
+            <span class="section-kicker" data-field="projectsKicker"></span>
+            <h2 class="projects-title">
+              <span data-field="projectsTitle"></span>
+              <span class="projects-title-muted" data-field="projectsTitleMuted"></span>
+            </h2>
+            <p class="projects-summary" data-field="projectsSummary"></p>
+          </div>
+          <div class="project-filters" data-field="projectFilters"></div>
+        </header>
 
-    <section id="contact" class="section contact-panel">
-      <div>
-        <p class="eyebrow">Contact</p>
-        <h2>Let&apos;s build something useful.</h2>
-      </div>
-      <a class="button button-primary" data-field="emailLink">Send Email</a>
-    </section>
+        <div class="projects-grid" data-field="projectsGrid"></div>
+      </section>
+
+      <section class="cta-section">
+        <div class="cta-panel">
+          <div class="cta-copy">
+            <h2 class="cta-title" data-field="ctaTitle"></h2>
+            <p class="cta-summary" data-field="ctaSummary"></p>
+          </div>
+          <div class="cta-actions">
+            <a class="cta-button cta-button-primary" data-field="ctaPrimary"></a>
+            <a class="cta-button cta-button-secondary" data-field="ctaSecondary"></a>
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact" class="site-footer">
+        <div class="footer-inner">
+          <p class="footer-version" data-field="footerText"></p>
+          <div class="footer-links" data-field="footerLinks"></div>
+        </div>
+      </footer>
+    </div>
   </template>
 
   <script src="./script.js" defer></script>

@@ -1,57 +1,301 @@
 {
+  "site": {
+    "brand": "Architectural Ledger"
+  },
+  "navigation": {
+    "links": [
+      { "label": "Portfolio", "href": "#top" },
+      { "label": "Projects", "href": "#projects" },
+      { "label": "Timeline", "href": "./experience.html" },
+      { "label": "Contact", "href": "./contact.html" }
+    ],
+    "cta": {
+      "label": "Hire the Engineer",
+      "href": "mailto:hello@example.com"
+    }
+  },
   "hero": {
-    "eyebrow": "Portfolio 2026",
-    "name": "Your Name",
-    "tagline": "Designer, developer, and problem-solver building useful digital products.",
-    "summary": "This front page is driven by local JSON so you can update your bio, projects, and contact details without adding a database or external CMS.",
-    "focus": "Shipping a fast portfolio site on GitHub Pages with local content and image assets.",
+    "eyebrow": "Systems Architect & Humanist",
+    "titlePrefix": "Designing technical systems with calm precision.",
+    "titleStrong": "Built like a ledger, not a landing page.",
+    "summary": "I build software with an architectural mindset: clear systems, measured interfaces, and technical decisions that stay readable under real operational pressure.",
+    "quote": "\"Complexity deserves structure, not noise.\"",
+    "badge": "Certified <br>Systems <br>Expert",
     "image": "./assets/images/profile-placeholder.svg",
-    "imageAlt": "Abstract placeholder portrait",
+    "imageAlt": "Engineer portrait",
+    "stats": [
+      { "label": "Experience", "value": "06", "unit": "Yrs" },
+      { "label": "Systems Shipped", "value": "24", "unit": "+" }
+    ],
     "primaryLink": {
-      "label": "Browse projects",
+      "label": "Explore Projects",
       "href": "#projects"
     },
     "secondaryLink": {
-      "label": "About me",
-      "href": "#about"
+      "label": "View Github",
+      "href": "./contact.html"
     }
   },
-  "highlights": [
-    {
-      "title": "Local content",
-      "description": "Homepage content is loaded from `data/site.json`, which keeps the site easy to edit and version."
-    },
-    {
-      "title": "Static hosting",
-      "description": "The structure is plain HTML, CSS, and JavaScript, so it works cleanly with GitHub Pages."
-    },
-    {
-      "title": "Image folder",
-      "description": "Profile images and project thumbnails can live in `assets/images/` and be referenced directly in JSON."
-    }
+  "marquee": [
+    "Distributed Systems",
+    "Cloud Architecture",
+    "Full Stack Craft",
+    "Human-Centric UI",
+    "Micro-Services"
   ],
-  "projects": [
-    {
-      "title": "Project One",
-      "description": "Replace this with a real project summary, tech stack, and destination link when you are ready.",
-      "tags": ["Frontend", "Static Site"],
-      "link": {
-        "label": "Project details",
+  "projectsOverview": {
+    "kicker": "Selected Works",
+    "title": "Architectural",
+    "titleMuted": "Solutions.",
+    "summary": "A curated collection of scalable systems, technical experiments, and production-grade architectures developed with a focus on precision and performance.",
+    "filters": ["All Systems", "Backend", "Infrastructure", "Full-Stack"],
+    "projects": [
+      {
+        "layout": "featured",
+        "title": "Nebula Distributed Engine",
+        "description": "A high-performance distributed task scheduler designed for heavy-load financial processing. Achieved 99.99% uptime during peak Q4 traffic.",
+        "tags": ["Golang", "Kubernetes", "gRPC"],
+        "image": "./assets/images/profile-placeholder.svg",
+        "imageAlt": "Distributed system visualization",
+        "link": {
+          "label": "View Case Study",
+          "href": "./project.html"
+        }
+      },
+      {
+        "layout": "stack",
+        "title": "Spectral Analytics",
+        "description": "Real-time data ingestion pipeline processing 1.2M events per second with automated anomaly detection.",
+        "tags": ["Python"],
+        "image": "./assets/images/profile-placeholder.svg",
+        "imageAlt": "Analytics dashboard",
+        "link": {
+          "label": "Explore Repository",
+          "href": "#"
+        }
+      },
+      {
+        "layout": "code",
+        "title": "Cloud Ledger Core",
+        "description": "Immutable infrastructure-as-code patterns for highly regulated fintech environments.",
+        "tags": ["Terraform", "AWS"],
+        "code": "const cluster = new Cluster({\n  nodeCount: 12,\n  region: 'us-east-1',\n  scaling: 'auto-optimized'\n});"
+      },
+      {
+        "layout": "tile",
+        "title": "Architectural Component Library",
+        "description": "A headless UI library optimized for performance-critical dashboards with zero-bundle-size footprint for core logic.",
+        "tags": ["React", "TypeScript"]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Looking for a Technical Partner?",
+    "summary": "I specialize in bridging the gap between complex business logic and scalable software architecture. Let's discuss your next project.",
+    "primary": {
+      "label": "Initiate Contact",
+      "href": "mailto:hello@example.com"
+    },
+    "secondary": {
+      "label": "Download Ledger.pdf",
+      "href": "#"
+    }
+  },
+  "projectDetail": {
+    "kicker": "Project Case Study",
+    "title": "Cloud-Native Analytics Platform",
+    "summary": "A high-throughput data processing engine built to scale infinitely. Leveraging distributed computing and real-time stream processing to deliver sub-second insights.",
+    "role": "Lead Architect / Backend Engineer",
+    "year": "2023 - 2024",
+    "primaryLink": {
+      "label": "Live Demo",
+      "href": "#"
+    },
+    "secondaryLink": {
+      "label": "GitHub",
+      "href": "#"
+    },
+    "avatar": {
+      "image": "./assets/images/profile-placeholder.svg",
+      "alt": "Engineer avatar"
+    },
+    "heroImage": {
+      "src": "./assets/images/profile-placeholder.svg",
+      "alt": "Platform dashboard overview"
+    },
+    "challenge": {
+      "title": "The Challenge",
+      "text": "Existing legacy systems were struggling with petabyte-scale ingestion, leading to a 40-minute lag between data generation and visualization. Infrastructure costs were spiraling as the platform scaled vertically."
+    },
+    "solution": {
+      "title": "The Solution",
+      "text": "We architected a serverless, event-driven pipeline using Kubernetes and Apache Kafka. By implementing a Kappa-style architecture, latency dropped below 500ms while operational costs were reduced by 65%."
+    },
+    "blueprint": {
+      "kicker": "Infrastructure & Tooling",
+      "title": "The Technical Blueprint",
+      "summary": "A selection of the core technologies utilized to maintain performance and reliability at scale.",
+      "cards": [
+        {
+          "icon": "CLD",
+          "label": "Cloud Provider",
+          "value": "AWS (EKS, S3, Lambda)"
+        },
+        {
+          "icon": "DB",
+          "label": "Data Store",
+          "value": "PostgreSQL, Redis, ClickHouse"
+        },
+        {
+          "icon": "STR",
+          "label": "Streaming",
+          "value": "Apache Kafka, gRPC"
+        },
+        {
+          "icon": "LANG",
+          "label": "Language",
+          "value": "Go (Golang), TypeScript"
+        }
+      ],
+      "tags": [
+        "Kubernetes",
+        "Terraform",
+        "Docker",
+        "Prometheus",
+        "Grafana"
+      ]
+    },
+    "achievements": [
+      {
+        "title": "99.99% Uptime",
+        "text": "Maintained through multi-region failover and robust health checks."
+      },
+      {
+        "title": "Scalable Pipeline",
+        "text": "Handled peak loads of 250,000 events per second during stress testing."
+      },
+      {
+        "title": "Automated CI/CD",
+        "text": "Implemented blue-green deployments with zero downtime."
+      }
+    ],
+    "architecture": {
+      "title": "System Architecture",
+      "intro": "The core of the platform is a distributed microservices mesh. We chose Go as the primary backend language due to its concurrency primitives and low memory footprint. Each service communicates via asynchronous gRPC protocols to minimize overhead.",
+      "code": "// Stream Processor Init\nfunc (s *Stream) Process(ctx context.Context) error {\n    for {\n        select {\n        case msg := <-s.input:\n            enriched := s.enricher.Apply(msg)\n            if err := s.sink.Write(enriched); err != nil {\n                log.Error(\"sink_error\", err)\n            }\n        case <-ctx.Done():\n            return nil\n        }\n    }\n}",
+      "outro": "By utilizing Kubernetes Horizontal Pod Autoscalers and custom metrics from Prometheus, the system automatically expands or contracts based on real-time traffic, ensuring the platform only pays for the compute it actually uses."
+    }
+  },
+  "experience": {
+    "kicker": "Chronicle of Growth",
+    "title": "Experience",
+    "titleMuted": "Timeline.",
+    "summary": "A retrospective of six years at the intersection of architecture and execution. Each entry marks a milestone in technical mastery.",
+    "avatar": {
+      "image": "./assets/images/profile-placeholder.svg",
+      "alt": "Engineer avatar"
+    },
+    "entries": [
+      {
+        "period": "2022 - Present",
+        "role": "Senior Systems Architect",
+        "company": "VelocityScale Labs",
+        "accent": "primary",
+        "marker": "CHK",
+        "points": [
+          "Spearheaded transition to micro-frontend architecture, reducing deployment collision by 40% across five global teams.",
+          "Designed a distributed caching strategy using Redis and Rust, slashing average latency from 240ms to 45ms.",
+          "Mentored four junior engineers, establishing a Code as Craft internal workshop series."
+        ],
+        "tags": ["Rust", "Kubernetes", "Next.js"]
+      },
+      {
+        "period": "2020 - 2022",
+        "role": "Full Stack Developer",
+        "company": "QuantumLogic Solutions",
+        "accent": "secondary",
+        "marker": "CHK",
+        "points": [
+          "Developed a high-throughput data visualization dashboard handling more than one million live events per second.",
+          "Implemented zero-downtime CI/CD pipelines using GitHub Actions and Terraform.",
+          "Reduced cloud infrastructure costs by 22% through strategic resource rightsizing and containerization."
+        ],
+        "tags": ["TypeScript", "PostgreSQL", "AWS"]
+      },
+      {
+        "period": "2018 - 2020",
+        "role": "Software Engineer I",
+        "company": "Foundry Systems",
+        "accent": "tertiary",
+        "marker": "CHK",
+        "points": [
+          "Contributed to the core API services, maintaining 99.9% uptime for the enterprise customer portal.",
+          "Refactored a legacy monolith into modular services, improving developer onboarding time by 30%.",
+          "Led the unit testing initiative, increasing code coverage from 45% to 82% across core modules."
+        ],
+        "tags": ["Node.js", "Docker", "Jest"]
+      }
+    ],
+    "cta": {
+      "title": "Ready to build the next iteration?",
+      "summary": "Six years of architectural rigor and clean code are at your disposal. Let's discuss how my experience aligns with your engineering goals.",
+      "primary": {
+        "label": "Download Resume",
+        "href": "#"
+      },
+      "secondary": {
+        "label": "Contact Me",
+        "href": "mailto:hello@example.com"
+      }
+    }
+  },
+  "contactPage": {
+    "availability": "Available for select projects",
+    "titlePrefix": "Let's architect",
+    "titleAccent": "something",
+    "titleSuffix": "resilient.",
+    "summary": "Whether it's a systems design consultation, a full-stack technical build, or just a deep dive into Rust versus Go, I'm always open to technical discourse.",
+    "avatar": {
+      "image": "./assets/images/profile-placeholder.svg",
+      "alt": "Engineer avatar"
+    },
+    "channels": [
+      {
+        "icon": "MAIL",
+        "label": "Primary Email",
+        "value": "hello@ledger.dev",
+        "href": "mailto:hello@ledger.dev"
+      },
+      {
+        "icon": "LINK",
+        "label": "LinkedIn Network",
+        "value": "linkedin.com/in/ledgerdev",
+        "href": "#"
+      },
+      {
+        "icon": "CODE",
+        "label": "GitHub Repository",
+        "value": "github.com/ledger-dev",
         "href": "#"
       }
+    ],
+    "response": {
+      "window": "12-24",
+      "unit": "Hours",
+      "text": "I typically review all incoming architectural inquiries twice daily. Current local time can be added here if you want it manually maintained."
     },
-    {
-      "title": "Project Two",
-      "description": "Use this section for featured case studies, experiments, or client work you want to highlight.",
-      "tags": ["UI", "Portfolio"],
-      "link": {
-        "label": "Project details",
-        "href": "#"
-      }
+    "map": {
+      "image": "./assets/images/profile-placeholder.svg",
+      "alt": "Minimal map aesthetic block"
     }
-  ],
-  "contact": {
-    "email": "hello@example.com",
-    "label": "hello@example.com"
+  },
+  "footer": {
+    "text": "Copyright 2026 Built with precision and restraint. v1.0.0",
+    "links": [
+      { "label": "GitHub", "href": "#" },
+      { "label": "LinkedIn", "href": "#" },
+      { "label": "Architecture", "href": "#" },
+      { "label": "System Status", "href": "#" }
+    ]
   }
 }

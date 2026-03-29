@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Project case study">
+  <title>Project Details</title>
+  <link rel="stylesheet" href="./project-styles.css">
+</head>
+<body>
+  <main id="project-app" aria-live="polite">
+    <section class="loading-state">
+      <p>Loading case study...</p>
+    </section>
+  </main>
+
+  <template id="project-template">
+    <div class="page-shell">
+      <nav class="top-nav">
+        <div class="top-nav-inner">
+          <a class="brand" data-field="brandName" href="./index.html">Ledger.Dev</a>
+          <div class="nav-links" data-field="navLinks"></div>
+          <div class="nav-meta">
+            <span class="terminal-pill">TERMINAL</span>
+            <div class="avatar-shell">
+              <img data-field="avatarImage" alt="">
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <main class="project-main">
+        <section class="case-hero">
+          <div class="case-hero-grid">
+            <div class="case-copy">
+              <p class="section-kicker" data-field="detailKicker"></p>
+              <h1 class="case-title" data-field="detailTitle"></h1>
+              <p class="case-summary" data-field="detailSummary"></p>
+            </div>
+
+            <aside class="case-meta">
+              <div class="meta-card">
+                <span class="meta-label">Role</span>
+                <p data-field="detailRole"></p>
+              </div>
+              <div class="meta-card">
+                <span class="meta-label">Year</span>
+                <p data-field="detailYear"></p>
+              </div>
+              <div class="meta-actions">
+                <a class="button-primary" data-field="detailPrimary"></a>
+                <a class="button-secondary" data-field="detailSecondary"></a>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="hero-image-section">
+          <div class="hero-image-frame">
+            <img data-field="detailHeroImage" alt="">
+          </div>
+        </section>
+
+        <section class="challenge-section">
+          <div class="challenge-grid">
+            <article class="challenge-card challenge-card-light">
+              <span class="challenge-icon">ERR</span>
+              <h2 data-field="challengeTitle"></h2>
+              <p data-field="challengeText"></p>
+            </article>
+
+            <article class="challenge-card challenge-card-blue">
+              <span class="challenge-icon">SOL</span>
+              <h2 data-field="solutionTitle"></h2>
+              <p data-field="solutionText"></p>
+            </article>
+          </div>
+        </section>
+
+        <section class="blueprint-section">
+          <div class="blueprint-header">
+            <div>
+              <p class="section-kicker" data-field="blueprintKicker"></p>
+              <h2 class="section-title" data-field="blueprintTitle"></h2>
+            </div>
+            <p class="blueprint-summary" data-field="blueprintSummary"></p>
+          </div>
+
+          <div class="blueprint-grid" data-field="blueprintCards"></div>
+          <div class="blueprint-tags" data-field="blueprintTags"></div>
+        </section>
+
+        <section class="deep-dive-section">
+          <aside class="achievements-column">
+            <h3>Key Achievements</h3>
+            <div class="achievement-list" data-field="achievements"></div>
+          </aside>
+
+          <article class="deep-dive-copy">
+            <h3 data-field="architectureTitle"></h3>
+            <p data-field="architectureIntro"></p>
+            <div class="code-block">
+              <pre><code data-field="architectureCode"></code></pre>
+            </div>
+            <p data-field="architectureOutro"></p>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-branding">
+            <span class="footer-brand" data-field="brandNameFooter"></span>
+            <p class="footer-copy" data-field="footerText"></p>
+          </div>
+          <div class="footer-links" data-field="footerLinks"></div>
+        </div>
+      </footer>
+    </div>
+  </template>
+
+  <script src="./project-script.js" defer></script>
+</body>
+</html>
