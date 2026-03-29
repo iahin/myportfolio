@@ -25,6 +25,7 @@ export function renderProjects(fragment, data) {
     const article = document.createElement("a");
     article.className = "project-card project-card-unified project-card-clickable";
     article.href = projectLinkForHome(project.link?.href || "./project.html");
+    const linkLabel = project.link?.label || "View Details";
     article.innerHTML = `
       <div class="project-media project-media-wide">
         <img src="${project.image || "./assets/images/profile-placeholder.svg"}" alt="${project.imageAlt || project.title}">
@@ -33,7 +34,7 @@ export function renderProjects(fragment, data) {
         <div class="project-tags">${renderTags(project.tags || [])}</div>
         <h3>${project.title}</h3>
         <p>${project.description}</p>
-        <span class="project-link">View Project Details</span>
+        <span class="project-link">${linkLabel}</span>
       </div>
     `;
 

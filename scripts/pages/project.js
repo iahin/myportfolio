@@ -14,35 +14,26 @@ async function loadProjectPage() {
 }
 
 function renderProjectPage(data) {
+  document.title = data.site.meta?.projectTitle || data.projectDetail.title || "Project Details";
+  const metaDescription = document.querySelector('meta[name="description"]');
+  if (metaDescription) {
+    metaDescription.setAttribute(
+      "content",
+      data.site.meta?.projectDescription || data.projectDetail.summary || ""
+    );
+  }
+
   const fragment = projectTemplate.content.cloneNode(true);
   const detail = data.projectDetail;
-
-  setText(fragment, "brandName", data.site.brand);
-  setText(fragment, "brandNameFooter", data.site.brand);
-
-  const avatar = fragment.querySelector('[data-field="avatarImage"]');
-  avatar.src = detail.avatar.image;
-  avatar.alt = detail.avatar.alt;
-
-  const navRoot = fragment.querySelector('[data-field="navLinks"]');
-  data.navigation.links.forEach((item) => {
-    const link = document.createElement("a");
-    let href = item.href;
-
-    if (item.href.startsWith("#")) {
-      href = `./index.html${item.href}`;
-    }
-
-    link.href = href;
-    link.textContent = item.label;
-    link.className = item.label === "Projects" ? "nav-link active" : "nav-link";
-    navRoot.append(link);
-  });
+  bindLink(fragment.querySelector('[data-field="projectBackLink"]'), detail.backLink);
 
   setText(fragment, "detailTitle", detail.title);
   setText(fragment, "detailSummary", detail.summary);
+  setText(fragment, "detailRoleLabel", detail.labels.role);
   setText(fragment, "detailRole", detail.role);
+  setText(fragment, "detailYearLabel", detail.labels.year);
   setText(fragment, "detailYear", detail.year);
+  setText(fragment, "detailAchievementsLabel", detail.labels.achievements);
   bindLink(fragment.querySelector('[data-field="detailPrimary"]'), detail.primaryLink);
   bindLink(fragment.querySelector('[data-field="detailSecondary"]'), detail.secondaryLink);
 
@@ -95,16 +86,6 @@ function renderProjectPage(data) {
   setText(fragment, "architectureIntro", detail.architecture.intro);
   setText(fragment, "architectureCode", detail.architecture.code);
   setText(fragment, "architectureOutro", detail.architecture.outro);
-  setText(fragment, "footerText", data.footer.text);
-
-  const footerLinksRoot = fragment.querySelector('[data-field="footerLinks"]');
-  data.footer.links.slice(0, 3).forEach((item) => {
-    const link = document.createElement("a");
-    link.className = "footer-link";
-    link.href = item.href;
-    link.textContent = item.label;
-    footerLinksRoot.append(link);
-  });
 
   projectRoot.replaceChildren(fragment);
 }

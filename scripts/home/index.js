@@ -18,6 +18,15 @@ async function loadPortfolio() {
 }
 
 function renderPortfolio(data) {
+  document.title = data.site.meta?.homeTitle || data.site.brand || "Portfolio";
+  const metaDescription = document.querySelector('meta[name="description"]');
+  if (metaDescription) {
+    metaDescription.setAttribute(
+      "content",
+      data.site.meta?.homeDescription || ""
+    );
+  }
+
   const fragment = template.content.cloneNode(true);
 
   renderNavigation(fragment, data);

@@ -3,33 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Project case study">
-  <title>Project Details</title>
+  <meta name="description" content="">
+  <title></title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <main id="project-app" aria-live="polite">
     <section class="loading-state">
-      <p>Loading case study...</p>
+      <p>Loading...</p>
     </section>
   </main>
 
   <template id="project-template">
     <div class="page-shell">
-      <nav class="top-nav">
-        <div class="top-nav-inner">
-          <a class="brand" data-field="brandName" href="./index.html">Ledger.Dev</a>
-          <div class="nav-links" data-field="navLinks"></div>
-          <div class="nav-meta">
-            <span class="terminal-pill">TERMINAL</span>
-            <div class="avatar-shell">
-              <img data-field="avatarImage" alt="">
-            </div>
-          </div>
-        </div>
-      </nav>
-
       <main class="project-main">
+        <div class="project-back-row">
+          <a class="button-secondary project-back-link" data-field="projectBackLink" href="./index.html#projects"></a>
+        </div>
         <section class="case-hero">
           <div class="case-hero-grid">
             <div class="case-copy">
@@ -39,11 +29,11 @@
 
             <aside class="case-meta">
               <div class="meta-card">
-                <span class="meta-label">Role</span>
+                <span class="meta-label" data-field="detailRoleLabel"></span>
                 <p data-field="detailRole"></p>
               </div>
               <div class="meta-card">
-                <span class="meta-label">Year</span>
+                <span class="meta-label" data-field="detailYearLabel"></span>
                 <p data-field="detailYear"></p>
               </div>
               <div class="meta-actions">
@@ -90,7 +80,7 @@
 
         <section class="deep-dive-section">
           <aside class="achievements-column">
-            <h3>Key Achievements</h3>
+            <h3 data-field="detailAchievementsLabel"></h3>
             <div class="achievement-list" data-field="achievements"></div>
           </aside>
 
@@ -105,15 +95,6 @@
         </section>
       </main>
 
-      <footer class="site-footer">
-        <div class="footer-inner">
-          <div class="footer-branding">
-            <span class="footer-brand" data-field="brandNameFooter"></span>
-            <p class="footer-copy" data-field="footerText"></p>
-          </div>
-          <div class="footer-links" data-field="footerLinks"></div>
-        </div>
-      </footer>
     </div>
   </template>
 

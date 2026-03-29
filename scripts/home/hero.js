@@ -1,4 +1,10 @@
 export function renderHero(fragment, data) {
+  const heroStatusLabel = fragment.querySelector('[data-field="heroStatusLabel"]');
+  if (heroStatusLabel) heroStatusLabel.textContent = data.hero.statusLabel;
+
+  const heroQuoteLabel = fragment.querySelector('[data-field="heroQuoteLabel"]');
+  if (heroQuoteLabel) heroQuoteLabel.textContent = data.hero.quoteLabel;
+
   const heroTitlePrefix = fragment.querySelector('[data-field="heroTitlePrefix"]');
   if (heroTitlePrefix) heroTitlePrefix.textContent = data.hero.titlePrefix;
 

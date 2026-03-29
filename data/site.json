@@ -1,6 +1,12 @@
 {
   "site": {
-    "brand": "Architectural Ledger"
+    "brand": "Isfaque AL Kaderi Tuhin",
+    "meta": {
+      "homeTitle": "Isfaque Tuhin | Senior Software Engineer",
+      "homeDescription": "Senior Software Engineer portfolio of Isfaque Tuhin, focused on backend, full-stack, cloud, and applied AI systems.",
+      "projectTitle": "Isfaque Tuhin | Capability Details",
+      "projectDescription": "Capability details and engineering profile for Isfaque Tuhin."
+    }
   },
   "navigation": {
     "links": [
@@ -16,16 +22,18 @@
   },
   "hero": {
     "eyebrow": "Systems Architect & Humanist",
-    "titlePrefix": "Designing technical systems with calm precision.",
-    "titleStrong": "Built like a ledger, not a landing page.",
-    "summary": "I build software with an architectural mindset: clear systems, measured interfaces, and technical decisions that stay readable under real operational pressure.",
-    "quote": "\"Complexity deserves structure, not noise.\"",
-    "badge": "Certified <br>Systems <br>Expert",
+    "titlePrefix": "Isfaque AL Kaderi Tuhin.",
+    "titleStrong": "Senior Software Engineer.",
+    "summary": "I build software that turns messy operational problems into reliable products people can actually use. My work sits across backend, full-stack, cloud, and applied AI delivery, especially where teams need practical systems, production discipline, and AI features that solve real workflow problems instead of adding noise.",
+    "quote": "\"Production systems should stay readable under real operational pressure.\"",
+    "badge": "Senior <br>Software <br>Engineer",
+    "statusLabel": "Production Ready",
+    "quoteLabel": "Engineering Philosophy",
     "image": "./assets/images/profile-placeholder.svg",
     "imageAlt": "Engineer portrait",
     "stats": [
-      { "label": "Experience", "value": "06", "unit": "Yrs" },
-      { "label": "Systems Shipped", "value": "24", "unit": "+" }
+      { "label": "Experience", "value": "05+", "unit": "Yrs" },
+      { "label": "Citizenship", "value": "SG", "unit": "Citizen" }
     ],
     "primaryLink": {
       "label": "Explore Projects",
@@ -45,56 +53,56 @@
   ],
   "projectsOverview": {
     "kicker": "Selected Works",
-    "title": "Architectural",
-    "titleMuted": "Solutions.",
-    "summary": "A curated collection of scalable systems, technical experiments, and production-grade architectures developed with a focus on precision and performance.",
+    "title": "Core",
+    "titleMuted": "Capabilities.",
+    "summary": "These are the strengths I bring to a team: backend depth, full-stack execution, cloud delivery, and applied AI integration shaped by production systems, operator-facing workflows, and the reality of shipping useful software under constraints.",
     "filters": ["All Systems", "Backend", "Infrastructure", "Full-Stack"],
     "projects": [
       {
         "layout": "featured",
-        "title": "Nebula Distributed Engine",
-        "description": "A high-performance distributed task scheduler designed for heavy-load financial processing. Achieved 99.99% uptime during peak Q4 traffic.",
-        "tags": ["Golang", "Kubernetes", "gRPC"],
+        "title": "Languages & Frameworks",
+        "description": "Hands-on delivery across Python, FastAPI, Django, JavaScript, TypeScript, Node.js, and Next.js for systems that need to move cleanly from implementation to deployment.",
+        "tags": ["Python", "FastAPI", "Django", "TypeScript", "Next.js"],
         "image": "./assets/images/profile-placeholder.svg",
-        "imageAlt": "Distributed system visualization",
+        "imageAlt": "Languages and frameworks capability",
         "link": {
-          "label": "View Case Study",
+          "label": "View Capability Details",
           "href": "./project.html"
         }
       },
       {
         "layout": "stack",
-        "title": "Spectral Analytics",
-        "description": "Real-time data ingestion pipeline processing 1.2M events per second with automated anomaly detection.",
-        "tags": ["Python"],
+        "title": "Backend, APIs & Data",
+        "description": "REST APIs, microservices, JWT auth, backend architecture, Qdrant, NVIDIA NIM, PostgreSQL, Microsoft SQL Server, MongoDB, Redis, and query optimization for reliable application delivery.",
+        "tags": ["REST APIs", "Microservices", "PostgreSQL", "Redis", "Qdrant"],
         "image": "./assets/images/profile-placeholder.svg",
-        "imageAlt": "Analytics dashboard",
+        "imageAlt": "Backend and data capability",
         "link": {
-          "label": "View Case Study",
+          "label": "View Capability Details",
           "href": "./project.html"
         }
       },
       {
         "layout": "code",
-        "title": "Cloud Ledger Core",
-        "description": "Immutable infrastructure-as-code patterns for highly regulated fintech environments.",
-        "tags": ["Terraform", "AWS"],
+        "title": "Cloud, DevOps & Frontend",
+        "description": "AWS, Azure VMs, Docker, GitHub Actions, CI/CD, plus practical frontend delivery with React, Next.js, Tailwind CSS, HTML, and CSS when product flow requires full-stack execution.",
+        "tags": ["AWS", "Docker", "GitHub Actions", "React", "Tailwind CSS"],
         "image": "./assets/images/profile-placeholder.svg",
-        "imageAlt": "Cloud infrastructure blueprint",
+        "imageAlt": "Cloud devops and frontend capability",
         "link": {
-          "label": "View Case Study",
+          "label": "View Capability Details",
           "href": "./project.html"
         }
       },
       {
         "layout": "tile",
-        "title": "Architectural Component Library",
-        "description": "A headless UI library optimized for performance-critical dashboards with zero-bundle-size footprint for core logic.",
-        "tags": ["React", "TypeScript"],
+        "title": "AI, Automation & Delivery",
+        "description": "Applied AI and automation using OpenAI API, LangChain, RAG workflows, prompt engineering, NLP, PyTorch, Hugging Face, Linux, UAT, and stakeholder collaboration to turn messy requirements into deployable software.",
+        "tags": ["OpenAI API", "LangChain", "PyTorch", "Hugging Face", "Linux"],
         "image": "./assets/images/profile-placeholder.svg",
-        "imageAlt": "Component library interface preview",
+        "imageAlt": "AI automation and delivery capability",
         "link": {
-          "label": "View Case Study",
+          "label": "View Capability Details",
           "href": "./project.html"
         }
       }
@@ -114,199 +122,244 @@
   },
   "projectDetail": {
     "kicker": "Project Case Study",
-    "title": "Cloud-Native Analytics Platform",
-    "summary": "A high-throughput data processing engine built to scale infinitely. Leveraging distributed computing and real-time stream processing to deliver sub-second insights.",
-    "role": "Lead Architect / Backend Engineer",
-    "year": "2023 - 2024",
+    "title": "Senior Software Engineer Profile",
+    "summary": "I am at my strongest when a team needs someone who can take ownership from architecture through deployment, especially in systems that combine backend engineering, practical full-stack delivery, and AI-enabled workflows that must stay secure, maintainable, and useful to real operators from day one.",
+    "role": "Senior Software Engineer",
+    "year": "2019 - Present",
     "primaryLink": {
-      "label": "Live Demo",
-      "href": "#"
+      "label": "Email",
+      "href": "mailto:ia_tuhin@live.com"
     },
     "secondaryLink": {
-      "label": "GitHub",
-      "href": "#"
+      "label": "Home",
+      "href": "./index.html#top"
+    },
+    "backLink": {
+      "label": "Back to Portfolio",
+      "href": "./index.html#projects"
+    },
+    "labels": {
+      "role": "Role",
+      "year": "Year",
+      "achievements": "Key Achievements"
     },
     "avatar": {
       "image": "./assets/images/profile-placeholder.svg",
-      "alt": "Engineer avatar"
+      "alt": "Isfaque AL Kaderi Tuhin"
     },
     "heroImage": {
       "src": "./assets/images/profile-placeholder.svg",
-      "alt": "Platform dashboard overview"
+      "alt": "Backend and AI systems profile"
     },
     "challenge": {
-      "title": "The Challenge",
-      "text": "Existing legacy systems were struggling with petabyte-scale ingestion, leading to a 40-minute lag between data generation and visualization. Infrastructure costs were spiraling as the platform scaled vertically."
+      "title": "What I Build",
+      "text": "Backend and full-stack systems across cloud, data, and AI-enabled environments, especially where software needs to support real operators, regulated workflows, or operationally critical use cases."
     },
     "solution": {
-      "title": "The Solution",
-      "text": "We architected a serverless, event-driven pipeline using Kubernetes and Apache Kafka. By implementing a Kappa-style architecture, latency dropped below 500ms while operational costs were reduced by 65%."
+      "title": "How I Deliver",
+      "text": "I work as a hands-on engineer first: aligning with stakeholders quickly, shaping the right architecture, and then building the system end to end until it is stable enough to earn trust in production. Where AI is useful, I integrate it pragmatically into the workflow instead of treating it as a separate demo layer."
     },
     "blueprint": {
       "kicker": "Infrastructure & Tooling",
-      "title": "The Technical Blueprint",
-      "summary": "A selection of the core technologies utilized to maintain performance and reliability at scale.",
+      "title": "Technical Focus Areas",
+      "summary": "A structured view of the main engineering areas covered across recent work.",
       "cards": [
         {
-          "icon": "CLD",
-          "label": "Cloud Provider",
-          "value": "AWS (EKS, S3, Lambda)"
+          "icon": "LANG",
+          "label": "Languages & Frameworks",
+          "value": "Python, FastAPI, Django, JavaScript, TypeScript, Node.js, Next.js"
+        },
+        {
+          "icon": "API",
+          "label": "Backend & APIs",
+          "value": "REST APIs, Microservices, JWT Auth, Backend Architecture, Qdrant, NVIDIA NIM"
         },
         {
           "icon": "DB",
-          "label": "Data Store",
-          "value": "PostgreSQL, Redis, ClickHouse"
+          "label": "Databases",
+          "value": "PostgreSQL, Microsoft SQL Server, MongoDB, Query Optimisation, Redis"
         },
         {
-          "icon": "STR",
-          "label": "Streaming",
-          "value": "Apache Kafka, gRPC"
-        },
-        {
-          "icon": "LANG",
-          "label": "Language",
-          "value": "Go (Golang), TypeScript"
+          "icon": "CLD",
+          "label": "Cloud, AI & Delivery",
+          "value": "AWS, Azure VMs, Docker, GitHub Actions, OpenAI API, LangChain, PyTorch, Hugging Face, NVIDIA NIM"
         }
       ],
       "tags": [
-        "Kubernetes",
-        "Terraform",
+        "Python",
+        "FastAPI",
+        "Django",
+        "AWS",
+        "Azure",
         "Docker",
-        "Prometheus",
-        "Grafana"
+        "OpenAI API",
+        "LangChain",
+        "NVIDIA NIM",
+        "Next.js",
+        "PostgreSQL"
       ]
     },
     "achievements": [
       {
-        "title": "99.99% Uptime",
-        "text": "Maintained through multi-region failover and robust health checks."
+        "title": "Official SNAIC Website",
+        "text": "Led development of the official SNAIC website using Next.js, TypeScript, Prisma, Contentful, and AWS Amplify, reducing content maintenance effort by about 60%."
       },
       {
-        "title": "Scalable Pipeline",
-        "text": "Handled peak loads of 250,000 events per second during stress testing."
+        "title": "RAG Platform in Production",
+        "text": "Built and productionized a RAG-based chatbot using FastAPI, PostgreSQL, Qdrant, Redis, NVIDIA NIM services, and AWS ECS for domain-specific responses."
       },
       {
-        "title": "Automated CI/CD",
-        "text": "Implemented blue-green deployments with zero downtime."
+        "title": "Published Research",
+        "text": "Contributed to publications across JAIT, IEEE, Springer, and related venues covering sentiment analysis, cyberattack forensics, cybercrime classification, and graph-based document clustering."
       }
     ],
     "architecture": {
-      "title": "System Architecture",
-      "intro": "The core of the platform is a distributed microservices mesh. We chose Go as the primary backend language due to its concurrency primitives and low memory footprint. Each service communicates via asynchronous gRPC protocols to minimize overhead.",
-      "code": "// Stream Processor Init\nfunc (s *Stream) Process(ctx context.Context) error {\n    for {\n        select {\n        case msg := <-s.input:\n            enriched := s.enricher.Apply(msg)\n            if err := s.sink.Write(enriched); err != nil {\n                log.Error(\"sink_error\", err)\n            }\n        case <-ctx.Done():\n            return nil\n        }\n    }\n}",
-      "outro": "By utilizing Kubernetes Horizontal Pod Autoscalers and custom metrics from Prometheus, the system automatically expands or contracts based on real-time traffic, ensuring the platform only pays for the compute it actually uses."
+      "title": "Engineering Approach",
+      "intro": "My work sits across backend systems, full-stack delivery, infrastructure, and applied AI engineering. I focus on architectures that can be explained clearly, deployed repeatably, and maintained by real teams without unnecessary complexity. That means practical APIs, clean service boundaries, strong data handling, and automation that reduces operational fragility.",
+      "code": "app = FastAPI()\n\n@app.post(\"/retrieve-answer\")\nasync def retrieve_answer(payload: QueryPayload):\n    vectors = qdrant_client.search(payload.query)\n    context = reranker.compose(vectors)\n    answer = llm_client.generate(context)\n    await audit_log.store(payload.user_id, payload.query)\n    return {\"status\": \"ok\", \"answer\": answer}\n",
+      "outro": "Across transport, public-sector, biometric, forensic, and applied AI environments, the consistent goal has been to translate messy business or operational requirements into deployable software that reduces manual work, improves reliability, and stays maintainable over time."
     }
   },
   "experience": {
     "kicker": "Chronicle of Growth",
     "title": "Experience",
-    "titleMuted": "Timeline.",
-    "summary": "A retrospective of six years at the intersection of architecture and execution. Each entry marks a milestone in technical mastery.",
+    "titleMuted": "Timeline",
+    "summary": "This timeline shows the kind of engineer I have become: someone trusted to step into complex domains, understand the operational reality, and turn that into software that ships, stabilises, and keeps delivering value.",
     "avatar": {
       "image": "./assets/images/profile-placeholder.svg",
       "alt": "Engineer avatar"
     },
     "entries": [
       {
-        "period": "2022 - Present",
-        "role": "Senior Systems Architect",
-        "company": "VelocityScale Labs",
+        "period": "Mar 2025 - Present",
+        "role": "Research Engineer (Full-Stack AI Engineer)",
+        "company": "SIT X NVIDIA AI Centre (SNAIC), Singapore",
         "accent": "primary",
         "marker": "CHK",
+        "summary": "Leading full-stack AI delivery across both the official SNAIC website and a production RAG-based chatbot platform, combining web engineering, applied AI integration, CI/CD automation, and AWS infrastructure foundations for industry-facing systems.",
         "points": [
-          "Spearheaded transition to micro-frontend architecture, reducing deployment collision by 40% across five global teams.",
-          "Designed a distributed caching strategy using Redis and Rust, slashing average latency from 240ms to 45ms.",
-          "Mentored four junior engineers, establishing a Code as Craft internal workshop series."
+          "Lead developer of the official SNAIC website, developed using Next.js, TypeScript, Prisma, Contentful, and AWS Amplify, reducing content maintenance effort by about 60% and strengthening external visibility for the centre.",
+          "Built and productionized a RAG-based chatbot platform using FastAPI, PostgreSQL, Qdrant, Redis, NVIDIA NIM services, and AWS ECS, integrating it with the SNAIC website to deliver domain-specific knowledge base responses in production.",
+          "Owned CI/CD automation using GitHub Actions and Docker, reducing deployment effort by more than 40% and improving consistency across multi-project environments.",
+          "Built and maintained AWS-based engineering foundations across EC2, IAM, Route 53, SES, SSL, and application routing, supporting applied AI systems within a S$4.8M research and industry collaboration portfolio.",
+          "Worked closely with researchers, engineers, and industry stakeholders to shape requirements, align technical priorities, and turn applied AI concepts into deployable solutions."
         ],
-        "tags": ["Rust", "Kubernetes", "Next.js"]
+        "tags": ["Next.js", "FastAPI", "Qdrant", "AWS", "NVIDIA NIM"]
       },
       {
-        "period": "2020 - 2022",
-        "role": "Full Stack Developer",
-        "company": "QuantumLogic Solutions",
+        "period": "Aug 2023 - Mar 2025",
+        "role": "Research Engineer (Full-Stack Developer)",
+        "company": "Singapore Institute of Technology, Singapore",
         "accent": "secondary",
         "marker": "CHK",
+        "summary": "Built and deployed AiDiSA for SMRT as an end-to-end analytics platform combining backend APIs, full-stack portal delivery, transformer-based NLP pipelines, and GPT-powered workflow automation for operational teams.",
         "points": [
-          "Developed a high-throughput data visualization dashboard handling more than one million live events per second.",
-          "Implemented zero-downtime CI/CD pipelines using GitHub Actions and Terraform.",
-          "Reduced cloud infrastructure costs by 22% through strategic resource rightsizing and containerization."
+          "Built and deployed AiDiSA, an end-to-end operational analytics platform for SMRT that automated commuter-feedback triage, case assignment, and real-time incident alerting across email, webforms, and internal systems.",
+          "Developed backend services and APIs using Django REST Framework, FastAPI, PostgreSQL, MS SQL, RabbitMQ, OAuth2, and JWT, processing 100 to 500 feedback entries per day and supporting secure role-based access for 20+ users.",
+          "Led full-stack delivery of the portal using Next.js, Tailwind, and Power BI dashboards, improving operational visibility across three SMRT divisions and reducing manual case-assignment workload by 30%.",
+          "Built and deployed local transformer-based NLP pipelines using PyTorch and Hugging Face Transformers, including domain-specific sentiment analysis datasets and real-time inference services optimized for Azure VM environments.",
+          "Integrated GPT-powered severity classification and keyword extraction into live workflows, reducing manual feedback review time by 75% and enabling near real-time alerting for high-priority incidents."
         ],
-        "tags": ["TypeScript", "PostgreSQL", "AWS"]
+        "tags": ["Django", "FastAPI", "Next.js", "PyTorch", "Azure"]
       },
       {
-        "period": "2018 - 2020",
-        "role": "Software Engineer I",
-        "company": "Foundry Systems",
+        "period": "Jul 2022 - Jul 2023",
+        "role": "Software Engineer",
+        "company": "NEC Asia Pacific Pte Ltd, Singapore",
         "accent": "tertiary",
         "marker": "CHK",
+        "summary": "Delivered secure backend features and automation for Singapore immigration systems, improving onboarding workflows, dashboard performance, production stability, and stakeholder acceptance in a regulated environment.",
         "points": [
-          "Contributed to the core API services, maintaining 99.9% uptime for the enterprise customer portal.",
-          "Refactored a legacy monolith into modular services, improving developer onboarding time by 30%.",
-          "Led the unit testing initiative, increasing code coverage from 45% to 82% across core modules."
+          "Developed a secure user onboarding module for Singapore immigration systems, integrating third-party biometric APIs and government identity services under strict security and access-control constraints.",
+          "Built automation scripts for account provisioning, role assignment, and scheduled jobs, reducing operational processing time from hours to minutes while improving consistency and auditability.",
+          "Optimised complex SQL and PL/SQL queries supporting daily operational dashboards used by 50+ immigration officers, improving performance and data accuracy.",
+          "Delivered 20+ backend enhancements and resolved 30+ production issues through log tracing and HTTP diagnostics, improving system stability and reducing support backlog.",
+          "Led backend feature testing and UAT walkthroughs with government stakeholders, validating API logic, role enforcement, and database triggers, contributing to a more than 90% first-pass acceptance rate."
         ],
-        "tags": ["Node.js", "Docker", "Jest"]
-      }
-    ],
-    "cta": {
-      "title": "Ready to build the next iteration?",
-      "summary": "Six years of architectural rigor and clean code are at your disposal. Let's discuss how my experience aligns with your engineering goals.",
-      "primary": {
-        "label": "Download Resume",
-        "href": "#"
+        "tags": ["Python", "SQL", "PL/SQL", "JWT Auth", "Government Systems"]
       },
-      "secondary": {
-        "label": "Contact Me",
-        "href": "mailto:hello@example.com"
+      {
+        "period": "Sep 2020 - May 2022",
+        "role": "Software Engineer",
+        "company": "Singapore Institute of Technology, Singapore",
+        "accent": "primary",
+        "marker": "CHK",
+        "summary": "Led full-stack engineering for the SLADE digital forensics system, combining modular backend services, large-scale data processing, graph analytics, and hybrid-environment deployment automation.",
+        "points": [
+          "Led full-stack development of the SLADE system, architecting a modular backend that integrated log parsing, forensic data cleaning, knowledge graph generation, and threat intelligence enrichment for real-time digital crime investigations.",
+          "Built a scalable backend pipeline using Python and Node.js, automating extraction, SHA-based hashing, and processing of forensic artifacts of about 60 GB per case with less than 1% error rate, reducing pre-processing time by over 50%.",
+          "Refactored legacy modules into independent microservices, separating core engines like the Crime Intelligence Engine and Log/Image Pre-processing Engine to improve maintainability and enable parallel development by distributed contributors.",
+          "Integrated graph-based analytics using NetworkX and KeyLines, constructing dynamic knowledge graphs to infer attack vectors from historical and real-time case data for case officers.",
+          "Deployed the SLADE system across hybrid environments including Windows Server, Hyper-V, WSL2, and GPU-enabled Linux subsystems, automating full-stack setup and reducing deployment time from more than 3 hours to under 1 hour."
+        ],
+        "tags": ["Python", "Node.js", "Docker", "NetworkX", "Windows Server"]
+      },
+      {
+        "period": "Jan 2019 - Dec 2019",
+        "role": "Application Developer",
+        "company": "IDEMIA, Singapore",
+        "accent": "secondary",
+        "marker": "CHK",
+        "summary": "Built a full-stack visitor management proof of concept integrating biometric hardware, secure backend APIs, and cross-platform clients for public security use cases across the APAC team.",
+        "points": [
+          "Developed a full-stack proof-of-concept visitor management system, combining an Android app and a .NET app connected through a Node.js and Express backend with MongoDB, deployed for the public security APAC team.",
+          "Built and secured RESTful APIs enabling communication between biometric hardware and backend services for real-time visitor validation and Passport data synchronization.",
+          "Integrated proprietary biometric SDKs across Android and Windows platforms, ensuring accurate authentication and streamlined onboarding for diverse biometric devices including M.Face and MorphoTop.",
+          "Achieved backend performance benchmarks supporting less than 1 second login latency and 590 concurrent users during peak load testing, validated using LoadUI and on-site simulations for public sector deployments.",
+          "Engineered a secure image and data upload pipeline using Multer and socket services, enabling encrypted biometric and document data transmission from mobile devices to backend servers."
+        ],
+        "tags": ["Node.js", "Express", "MongoDB", ".NET", "Biometrics"]
+      },
+      {
+        "period": "2016 - 2020",
+        "role": "B.Eng. Software Engineering (Honors)",
+        "company": "Singapore Institute of Technology, Singapore",
+        "accent": "tertiary",
+        "marker": "EDU",
+        "summary": "Completed a Bachelor of Engineering in Software Engineering with honors, establishing a strong foundation in software architecture, backend systems, and production-focused engineering.",
+        "points": [
+          "Completed a Bachelor of Engineering in Software Engineering with honors, building the technical foundation for backend systems, software architecture, and production engineering."
+        ],
+        "tags": ["Software Engineering", "Honors"]
+      },
+      {
+        "period": "2012 - 2015",
+        "role": "Diploma in Computer Engineering",
+        "company": "Singapore Polytechnic",
+        "accent": "secondary",
+        "marker": "EDU",
+        "summary": "Completed a diploma in Computer Engineering, building early grounding in computing systems, software development, and engineering fundamentals.",
+        "points": [
+          "Completed a diploma in Computer Engineering with early grounding in computing systems, software development, and engineering fundamentals."
+        ],
+        "tags": ["Computer Engineering", "Diploma"]
       }
-    }
+    ]
   },
   "contactPage": {
-    "availability": "Available for select projects",
-    "titlePrefix": "Let's architect",
-    "titleAccent": "something",
-    "titleSuffix": "resilient.",
-    "summary": "Whether it's a systems design consultation, a full-stack technical build, or just a deep dive into Rust versus Go, I'm always open to technical discourse.",
-    "avatar": {
-      "image": "./assets/images/profile-placeholder.svg",
-      "alt": "Engineer avatar"
+    "cta": {
+      "title": "Ready to build the next iteration?",
+      "summary": "If you are hiring for someone who can own backend and full-stack delivery, work comfortably with AI-enabled systems, and bring calm execution to high-stakes environments, I would be glad to speak."
     },
     "channels": [
       {
         "icon": "MAIL",
         "label": "Primary Email",
-        "value": "hello@ledger.dev",
-        "href": "mailto:hello@ledger.dev"
+        "value": "shioktech@gmail.com",
+        "href": "mailto:shioktech@gmail.com"
       },
       {
         "icon": "LINK",
-        "label": "LinkedIn Network",
-        "value": "linkedin.com/in/ledgerdev",
-        "href": "#"
+        "label": "LinkedIn",
+        "value": "LinkedIn",
+        "href": "https://www.linkedin.com/in/iatuhin/"
       },
       {
         "icon": "CODE",
-        "label": "GitHub Repository",
-        "value": "github.com/ledger-dev",
-        "href": "#"
+        "label": "GitHub",
+        "value": "github.com/iahin",
+        "href": "https://github.com/iahin"
       }
-    ],
-    "response": {
-      "window": "12-24",
-      "unit": "Hours",
-      "text": "I typically review all incoming architectural inquiries twice daily. Current local time can be added here if you want it manually maintained."
-    },
-    "map": {
-      "image": "./assets/images/profile-placeholder.svg",
-      "alt": "Minimal map aesthetic block"
-    }
-  },
-  "footer": {
-    "text": "Copyright 2026 Built with precision and restraint. v1.0.0",
-    "links": [
-      { "label": "GitHub", "href": "#" },
-      { "label": "LinkedIn", "href": "#" },
-      { "label": "Architecture", "href": "#" },
-      { "label": "System Status", "href": "#" }
     ]
   }
 }
