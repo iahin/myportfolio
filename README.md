@@ -11,6 +11,7 @@ Static portfolio site for GitHub Pages.
 - `scripts/pages/`: page entry scripts
 - `scripts/shared/`: shared fetch and DOM helpers
 - `data/site.json`: local content source
+- `data/project-detail.json`: project detail page content
 - `assets/images/`: local image assets
 - `assets/fonts/`: optional local font files
 
@@ -23,6 +24,15 @@ Update [`data/site.json`](./data/site.json) to change:
 - highlight cards
 - featured projects
 - image paths
+
+Update [`data/project-detail.json`](./data/project-detail.json) to change:
+
+- project detail title/subtitle
+- overview/problem/solution
+- architecture copy and code sample
+- stack badges
+- impact metrics and result list
+- gallery images and descriptions
 
 ## Local Fonts
 

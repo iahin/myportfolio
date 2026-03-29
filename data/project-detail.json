@@ -1,0 +1,99 @@
+{
+  "title": "AIDISA: AI-Driven Intelligent Situation Awareness System",
+  "subtitle": "Full-stack operational analytics platform for SMRT, combining backend APIs, NLP workflows, GPT-assisted triage, and production delivery across Azure environments.",
+  "hashtags": ["#NLP", "#LLM", "#FastAPI", "#Django", "#Nextjs", "#Azure"],
+  "backLink": {
+    "label": "Back to Portfolio",
+    "href": "./index.html#projects"
+  },
+  "heroImage": {
+    "src": "./assets/images/hero_image.jpg",
+    "alt": "Project workspace and engineering setup"
+  },
+  "overview": {
+    "title": "Overview",
+    "summary": "AiDiSA was built to replace manual commuter-feedback handling with an end-to-end analytics workflow that could classify, assign, and escalate issues in near real time for transport operations teams.",
+    "problemTitle": "Problem",
+    "problem": "SMRT teams were handling commuter feedback across email, webforms, and internal systems using labour-intensive triage and manual assignment. The process slowed incident response, increased inconsistency, and made it harder to identify critical issues early.",
+    "solutionTitle": "Solution",
+    "solution": "I designed and delivered a modular full-stack platform with Django REST Framework, FastAPI, PostgreSQL, MS SQL, Next.js, Power BI, and NLP services. The system automated triage, improved routing, surfaced urgent incidents faster, and gave operational teams a clearer live view of incoming issues."
+  },
+  "architecture": {
+    "title": "Architecture",
+    "intro": "The platform separated ingestion, triage, classification, assignment, and alerting into clear services so operational logic could evolve without destabilising the whole system. FastAPI and Django handled API and business workflows, while transformer and GPT-assisted pipelines were kept modular for safer iteration.",
+    "code": "router.post(\"/triage\")\nasync def triage_feedback(payload: FeedbackPayload):\n    sentiment = sentiment_service.score(payload.message)\n    severity = llm_classifier.classify(payload.message)\n    keywords = keyword_service.extract(payload.message)\n    queue_item = assignment_engine.route(\n        channel=payload.channel,\n        severity=severity,\n        sentiment=sentiment,\n        keywords=keywords,\n    )\n    await case_repo.save(queue_item)\n    return {\"status\": \"queued\", \"severity\": severity}\n",
+    "outro": "This kept the system practical for operators: APIs stayed clean, services remained replaceable, and deployment across staging and production environments stayed manageable through Docker and CI/CD."
+  },
+  "stacks": {
+    "title": "Tech Stacks",
+    "summary": "The implementation leaned on a compact mix of backend, frontend, data, and NLP tooling that could be deployed reliably and maintained by a small engineering team.",
+    "badges": [
+      "Django REST Framework",
+      "FastAPI",
+      "PostgreSQL",
+      "Microsoft SQL Server",
+      "RabbitMQ",
+      "OAuth2",
+      "JWT",
+      "Next.js",
+      "Tailwind CSS",
+      "Power BI",
+      "PyTorch",
+      "Hugging Face",
+      "Azure VM",
+      "Docker",
+      "GitHub Actions"
+    ]
+  },
+  "impact": {
+    "title": "Impact And Results",
+    "summary": "The value of the project was measured in reduced manual effort, faster response to urgent cases, and better operational visibility across transport teams.",
+    "metrics": [
+      { "value": "75%", "label": "less manual triage time" },
+      { "value": "30%", "label": "less case assignment workload" },
+      { "value": "3", "label": "SMRT divisions supported" }
+    ],
+    "items": [
+      {
+        "title": "Automated Feedback Routing",
+        "text": "Reduced the daily burden on operations staff by automatically assigning cases using a workload-aware routing approach."
+      },
+      {
+        "title": "Real-Time Incident Visibility",
+        "text": "Enabled near real-time flagging of high-priority incidents so urgent commuter issues could be surfaced earlier."
+      },
+      {
+        "title": "Operational Dashboarding",
+        "text": "Improved visibility across multiple divisions through a unified portal and reporting layer for active case monitoring."
+      },
+      {
+        "title": "Production Delivery",
+        "text": "Shortened deployment cycles from days to hours by containerising services and setting up repeatable CI/CD pipelines."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Gallery",
+    "summary": "A compact visual record of how the system was framed, delivered, and presented.",
+    "items": [
+      {
+        "src": "./assets/images/hero_image.jpg",
+        "alt": "Project workspace and engineering setup",
+        "title": "System Delivery Workspace",
+        "description": "The working setup used to iterate across backend services, interface work, and deployment tasks during implementation."
+      },
+      {
+        "src": "./assets/images/hero_image.jpg",
+        "alt": "Platform implementation and analytics workflow",
+        "title": "Operational Workflow Build",
+        "description": "Represents the build phase where triage, assignment, and incident alerting workflows were refined into a stable operator-facing product."
+      },
+      {
+        "src": "./assets/images/hero_image.jpg",
+        "alt": "Platform review and rollout documentation",
+        "title": "Deployment And Review",
+        "description": "Used here as a stand-in for deployment and review artefacts while the project remains represented by local static assets only."
+      }
+    ]
+  }
+}

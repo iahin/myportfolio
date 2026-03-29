@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <title></title>
-  <link rel="stylesheet" href="./styles.css?v=2">
+  <link rel="stylesheet" href="./styles.css?v=3">
 </head>
 <body>
   <main id="project-app" aria-live="polite">
@@ -20,84 +20,101 @@
         <div class="project-back-row">
           <a class="button-secondary project-back-link" data-field="projectBackLink" href="./index.html#projects"></a>
         </div>
-        <section class="case-hero">
-          <div class="case-hero-grid">
+        <section class="case-hero compact-case-hero">
+          <div class="case-hero-grid compact-case-grid">
             <div class="case-copy">
               <h1 class="case-title" data-field="detailTitle"></h1>
-              <p class="case-summary" data-field="detailSummary"></p>
+              <p class="case-subtitle" data-field="detailSubtitle"></p>
+              <div class="case-hashtags" data-field="detailHashtags"></div>
             </div>
 
-            <aside class="case-meta">
-              <div class="meta-card">
-                <span class="meta-label" data-field="detailRoleLabel"></span>
-                <p data-field="detailRole"></p>
+            <div class="case-hero-visual">
+              <div class="hero-image-frame">
+                <img data-field="detailHeroImage" alt="">
               </div>
-              <div class="meta-card">
-                <span class="meta-label" data-field="detailYearLabel"></span>
-                <p data-field="detailYear"></p>
-              </div>
-              <div class="meta-actions">
-                <a class="button-primary" data-field="detailPrimary"></a>
-                <a class="button-secondary" data-field="detailSecondary"></a>
-              </div>
-            </aside>
+            </div>
           </div>
         </section>
 
-        <section class="hero-image-section">
-          <div class="hero-image-frame">
-            <img data-field="detailHeroImage" alt="">
+        <section class="detail-section compact-section">
+          <div class="section-header section-header-compact">
+            <div>
+              <h2 class="section-title" data-field="overviewTitle"></h2>
+              <p class="section-summary" data-field="overviewSummary"></p>
+            </div>
           </div>
-        </section>
-
-        <section class="challenge-section">
-          <div class="challenge-grid">
+          <div class="overview-grid">
             <article class="challenge-card challenge-card-light">
-              <span class="challenge-icon">ERR</span>
-              <h2 data-field="challengeTitle"></h2>
-              <p data-field="challengeText"></p>
+              <h3 data-field="problemTitle"></h3>
+              <p data-field="problemText"></p>
             </article>
 
             <article class="challenge-card challenge-card-blue">
-              <span class="challenge-icon">SOL</span>
-              <h2 data-field="solutionTitle"></h2>
+              <h3 data-field="solutionTitle"></h3>
               <p data-field="solutionText"></p>
             </article>
           </div>
         </section>
 
-        <section class="blueprint-section">
-          <div class="blueprint-header">
+        <section class="detail-section compact-section">
+          <div class="section-header section-header-compact">
             <div>
-              <h2 class="section-title" data-field="blueprintTitle"></h2>
+              <h2 class="section-title" data-field="architectureTitle"></h2>
             </div>
-            <p class="blueprint-summary" data-field="blueprintSummary"></p>
           </div>
-
-          <div class="blueprint-grid" data-field="blueprintCards"></div>
-          <div class="blueprint-tags" data-field="blueprintTags"></div>
-        </section>
-
-        <section class="deep-dive-section">
-          <aside class="achievements-column">
-            <h3 data-field="detailAchievementsLabel"></h3>
-            <div class="achievement-list" data-field="achievements"></div>
-          </aside>
-
-          <article class="deep-dive-copy">
-            <h3 data-field="architectureTitle"></h3>
+          <article class="architecture-card">
             <p data-field="architectureIntro"></p>
-            <div class="code-block">
+            <div class="code-block compact-code-block">
               <pre><code data-field="architectureCode"></code></pre>
             </div>
             <p data-field="architectureOutro"></p>
           </article>
         </section>
-      </main>
 
+        <section class="detail-section compact-section">
+          <div class="section-header section-header-compact">
+            <div>
+              <h2 class="section-title" data-field="stacksTitle"></h2>
+              <p class="section-summary" data-field="stacksSummary"></p>
+            </div>
+          </div>
+          <div class="detail-stack-badges" data-field="stackBadges"></div>
+        </section>
+
+        <section class="detail-section compact-section">
+          <div class="section-header section-header-compact">
+            <div>
+              <h2 class="section-title" data-field="impactTitle"></h2>
+              <p class="section-summary" data-field="impactSummary"></p>
+            </div>
+          </div>
+          <div class="impact-metrics" data-field="impactMetrics"></div>
+          <div class="impact-list" data-field="impactItems"></div>
+        </section>
+
+        <section class="detail-section compact-section">
+          <div class="section-header section-header-compact">
+            <div>
+              <h2 class="section-title" data-field="galleryTitle"></h2>
+              <p class="section-summary" data-field="gallerySummary"></p>
+            </div>
+          </div>
+          <div class="gallery-grid" data-field="galleryItems"></div>
+        </section>
+      </main>
+      <div class="gallery-lightbox" data-field="galleryLightbox" hidden>
+        <button class="gallery-lightbox-close" type="button" data-field="galleryLightboxClose" aria-label="Close image">Close</button>
+        <div class="gallery-lightbox-card">
+          <img data-field="galleryLightboxImage" alt="">
+          <div class="gallery-lightbox-copy">
+            <h3 data-field="galleryLightboxTitle"></h3>
+            <p data-field="galleryLightboxDescription"></p>
+          </div>
+        </div>
+      </div>
     </div>
   </template>
 
-  <script type="module" src="./scripts/pages/project.js"></script>
+  <script type="module" src="./scripts/pages/project.js?v=2"></script>
 </body>
 </html>
