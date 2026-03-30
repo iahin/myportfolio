@@ -1,5 +1,8 @@
+const DATA_VERSION = "20260330-1";
+
 async function fetchJson(path) {
-  const response = await fetch(path);
+  const separator = path.includes("?") ? "&" : "?";
+  const response = await fetch(`${path}${separator}v=${DATA_VERSION}`);
 
   if (!response.ok) {
     throw new Error(`Failed to load data from ${path}: ${response.status}`);

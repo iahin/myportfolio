@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <title></title>
-  <link rel="stylesheet" href="./styles.css?v=3">
+  <link rel="stylesheet" href="./styles.css?v=8">
 </head>
 <body>
   <main id="project-app" aria-live="polite">
@@ -16,92 +16,93 @@
 
   <template id="project-template">
     <div class="page-shell">
-      <main class="project-main">
-        <div class="project-back-row">
-          <a class="button-secondary project-back-link" data-field="projectBackLink" href="./index.html#projects"></a>
-        </div>
-        <section class="case-hero compact-case-hero">
-          <div class="case-hero-grid compact-case-grid">
-            <div class="case-copy">
-              <h1 class="case-title" data-field="detailTitle"></h1>
-              <p class="case-subtitle" data-field="detailSubtitle"></p>
-              <div class="case-hashtags" data-field="detailHashtags"></div>
+      <main class="project-page-shell">
+        <header class="project-hero-banner" data-field="projectHeroBanner">
+          <div class="project-hero-inner">
+            <div class="project-back-row project-back-row-banner">
+              <a class="button-secondary project-back-link project-back-link-banner" data-field="projectBackLink" href="./index.html#projects"></a>
+            </div>
+            <h1 class="project-banner-title" data-field="detailTitle"></h1>
+            <p class="project-banner-subtitle" data-field="detailSubtitle"></p>
+            <div class="case-hashtags project-banner-tags" data-field="detailHashtags"></div>
+          </div>
+        </header>
+
+        <section class="project-content-shell">
+          <div class="project-content-grid">
+            <div class="project-primary-column">
+              <section class="project-content-section">
+                <h2 class="project-content-title">Overview</h2>
+                <p class="project-content-lead" data-field="overviewSummary"></p>
+                <p class="project-content-body" data-field="overviewBody"></p>
+              </section>
+
+              <section class="project-content-section">
+                <h2 class="project-content-title">Technical Implementation</h2>
+                <div class="project-architecture-block">
+                  <div class="project-architecture-copy">
+                    <p class="project-content-body" data-field="architectureIntro"></p>
+                    <p class="project-content-body" data-field="architectureOutro"></p>
+                  </div>
+                  <figure class="project-architecture-figure" data-field="architectureImage">
+                    <button
+                      class="project-architecture-trigger"
+                      type="button"
+                      data-field="architectureImageTrigger"
+                      aria-label="Open architecture image"
+                    >
+                      <img data-field="architectureImageSrc" alt="">
+                    </button>
+                  </figure>
+                </div>
+              </section>
+
+              <section class="project-content-section">
+                <h2 class="project-content-title">Gallery</h2>
+                <div class="gallery-grid gallery-grid-project" data-field="galleryItems"></div>
+              </section>
             </div>
 
-            <div class="case-hero-visual">
-              <div class="hero-image-frame">
-                <img data-field="detailHeroImage" alt="">
-              </div>
-            </div>
-          </div>
-        </section>
+            <aside class="project-sidebar-column">
+              <section class="project-side-panel">
+                <h2 class="project-side-panel-title">At a Glance</h2>
+                <div class="project-side-meta">
+                  <div class="project-side-meta-row">
+                    <span class="project-side-label">Role</span>
+                    <strong class="project-side-value" data-field="detailRoleText"></strong>
+                  </div>
+                  <div class="project-side-meta-row">
+                    <span class="project-side-label">Company</span>
+                    <strong class="project-side-value" data-field="detailCompanyText"></strong>
+                  </div>
+                  <div class="project-side-meta-row" data-field="detailClientRow">
+                    <span class="project-side-label" data-field="detailClientLabel"></span>
+                    <strong class="project-side-value" data-field="detailClientText"></strong>
+                  </div>
+                </div>
 
-        <section class="detail-section compact-section">
-          <div class="section-header section-header-compact">
-            <div>
-              <h2 class="section-title" data-field="overviewTitle"></h2>
-              <p class="section-summary" data-field="overviewSummary"></p>
-            </div>
-          </div>
-          <div class="overview-grid">
-            <article class="challenge-card challenge-card-light">
-              <h3 data-field="problemTitle"></h3>
-              <p data-field="problemText"></p>
-            </article>
+                <div class="project-side-links" data-field="detailLinksBlock">
+                  <h3 class="detail-links-title project-side-links-title" data-field="detailLinksTitle"></h3>
+                  <div class="detail-links-list detail-links-list-sidebar" data-field="detailLinksList"></div>
+                </div>
+              </section>
 
-            <article class="challenge-card challenge-card-blue">
-              <h3 data-field="solutionTitle"></h3>
-              <p data-field="solutionText"></p>
-            </article>
-          </div>
-        </section>
+              <section class="project-side-panel">
+                <h2 class="project-side-panel-title" data-field="impactTitle"></h2>
+                <div class="impact-metrics impact-metrics-sidebar" data-field="impactMetrics"></div>
+                <div class="impact-list impact-list-sidebar" data-field="impactItems"></div>
+              </section>
 
-        <section class="detail-section compact-section">
-          <div class="section-header section-header-compact">
-            <div>
-              <h2 class="section-title" data-field="architectureTitle"></h2>
-            </div>
+              <section class="project-side-panel">
+                <h2 class="project-side-panel-title" data-field="stacksTitle"></h2>
+                <p class="project-side-note project-side-stack-summary" data-field="stacksSummary"></p>
+                <div class="detail-stack-badges detail-stack-badges-sidebar" data-field="stackBadges"></div>
+              </section>
+            </aside>
           </div>
-          <article class="architecture-card">
-            <p data-field="architectureIntro"></p>
-            <div class="code-block compact-code-block">
-              <pre><code data-field="architectureCode"></code></pre>
-            </div>
-            <p data-field="architectureOutro"></p>
-          </article>
-        </section>
-
-        <section class="detail-section compact-section">
-          <div class="section-header section-header-compact">
-            <div>
-              <h2 class="section-title" data-field="stacksTitle"></h2>
-              <p class="section-summary" data-field="stacksSummary"></p>
-            </div>
-          </div>
-          <div class="detail-stack-badges" data-field="stackBadges"></div>
-        </section>
-
-        <section class="detail-section compact-section">
-          <div class="section-header section-header-compact">
-            <div>
-              <h2 class="section-title" data-field="impactTitle"></h2>
-              <p class="section-summary" data-field="impactSummary"></p>
-            </div>
-          </div>
-          <div class="impact-metrics" data-field="impactMetrics"></div>
-          <div class="impact-list" data-field="impactItems"></div>
-        </section>
-
-        <section class="detail-section compact-section">
-          <div class="section-header section-header-compact">
-            <div>
-              <h2 class="section-title" data-field="galleryTitle"></h2>
-              <p class="section-summary" data-field="gallerySummary"></p>
-            </div>
-          </div>
-          <div class="gallery-grid" data-field="galleryItems"></div>
         </section>
       </main>
+
       <div class="gallery-lightbox" data-field="galleryLightbox" hidden>
         <button class="gallery-lightbox-close" type="button" data-field="galleryLightboxClose" aria-label="Close image">Close</button>
         <div class="gallery-lightbox-card">
@@ -115,6 +116,6 @@
     </div>
   </template>
 
-  <script type="module" src="./scripts/pages/project.js?v=2"></script>
+  <script type="module" src="./scripts/pages/project.js?v=14"></script>
 </body>
 </html>

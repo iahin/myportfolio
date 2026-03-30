@@ -41,50 +41,100 @@
     "projects": [
       {
         "layout": "featured",
-        "title": "Languages & Frameworks",
-        "description": "Hands-on delivery across Python, FastAPI, Django, JavaScript, TypeScript, Node.js, and Next.js for systems that need to move cleanly from implementation to deployment.",
-        "tags": ["Python", "FastAPI", "Django", "TypeScript", "Next.js"],
-        "image": "./assets/images/profile-placeholder.svg",
-        "imageAlt": "Languages and frameworks capability",
+        "slug": "smart-lobby",
+        "type": "project",
+        "title": "Smart Lobby: Biometric Visitor Management System",
+        "description": "Full-stack visitor management proof of concept for IDEMIA, combining Android biometric onboarding, a local Node.js and MongoDB backend, and SmartGate simulation for security-critical environments.",
+        "tags": ["Android", "Biometrics", "Node.js", "MongoDB", "IDEMIA"],
+        "image": "./assets/images/idemia_main.png",
+        "imageAlt": "Smart Lobby biometric visitor management system presentation",
         "link": {
           "label": "View Capability Details",
-          "href": "./project.html"
+          "href": "./project.html?project=smart-lobby"
         }
       },
       {
         "layout": "stack",
-        "title": "Backend, APIs & Data",
-        "description": "REST APIs, microservices, JWT auth, backend architecture, Qdrant, NVIDIA NIM, PostgreSQL, Microsoft SQL Server, MongoDB, Redis, and query optimization for reliable application delivery.",
-        "tags": ["REST APIs", "Microservices", "PostgreSQL", "Redis", "Qdrant"],
-        "image": "./assets/images/profile-placeholder.svg",
-        "imageAlt": "Backend and data capability",
+        "slug": "slade",
+        "type": "project",
+        "title": "SLADE: Smart Learning Analytics for Digital Crime",
+        "description": "Digital forensics platform built for cybercrime investigation, combining forensic ingestion, knowledge graph intelligence, machine learning classification, and collaborative case management across hybrid environments.",
+        "tags": ["Digital Forensics", "Knowledge Graph", "Machine Learning", "Python", "Cybersecurity"],
+        "image": "./assets/images/slade_overview.png",
+        "imageAlt": "SLADE digital forensics concept overview",
         "link": {
           "label": "View Capability Details",
-          "href": "./project.html"
+          "href": "./project.html?project=slade"
         }
       },
       {
         "layout": "code",
-        "title": "Cloud, DevOps & Frontend",
-        "description": "AWS, Azure VMs, Docker, GitHub Actions, CI/CD, plus practical frontend delivery with React, Next.js, Tailwind CSS, HTML, and CSS when product flow requires full-stack execution.",
-        "tags": ["AWS", "Docker", "GitHub Actions", "React", "Tailwind CSS"],
-        "image": "./assets/images/profile-placeholder.svg",
-        "imageAlt": "Cloud devops and frontend capability",
+        "slug": "nec",
+        "type": "project",
+        "title": "BioPass2: Singapore Immigration Identity & Access Platform",
+        "description": "Enterprise backend and identity workflow platform for Singapore immigration operations, combining secure onboarding, biometric integrations, Oracle data workflows, and regulated deployment support.",
+        "tags": ["Java", "Spring", "OracleDB", "Identity Management", "Government"],
+        "image": "./assets/images/nec_hero.png",
+        "imageAlt": "Singapore immigration identity and access platform context",
         "link": {
           "label": "View Capability Details",
-          "href": "./project.html"
+          "href": "./project.html?project=nec"
         }
       },
       {
         "layout": "tile",
-        "title": "AI, Automation & Delivery",
-        "description": "Applied AI and automation using OpenAI API, LangChain, RAG workflows, prompt engineering, NLP, PyTorch, Hugging Face, Linux, UAT, and stakeholder collaboration to turn messy requirements into deployable software.",
-        "tags": ["OpenAI API", "LangChain", "PyTorch", "Hugging Face", "Linux"],
-        "image": "./assets/images/profile-placeholder.svg",
-        "imageAlt": "AI automation and delivery capability",
+        "slug": "aidisa",
+        "type": "project",
+        "title": "AIDISA: AI-Driven Intelligent Situation Awareness System",
+        "description": "Operational analytics platform for SMRT, combining backend APIs, NLP workflows, GPT-assisted triage, dashboard alerting, and automated case assignment across Azure environments.",
+        "tags": ["NLP", "LLM", "Next.js", "Django", "Azure"],
+        "image": "./assets/images/aidisa_hero.webp",
+        "imageAlt": "AiDiSA team presenting operational dashboards",
         "link": {
           "label": "View Capability Details",
-          "href": "./project.html"
+          "href": "./project.html?project=aidisa"
+        }
+      },
+      {
+        "layout": "tile",
+        "slug": "snaic-site",
+        "type": "project",
+        "title": "SIT-NVIDIA Joint AI Centre (SNAIC) Official Website",
+        "description": "Industry-facing full-stack platform for SNAIC, combining headless content workflows, a RAG-powered chatbot, AWS-backed communication flows, and a polished project discovery experience.",
+        "tags": ["Next.js", "RAG", "Contentful", "AWS", "FastAPI"],
+        "image": "./assets/images/snaic_home.png",
+        "imageAlt": "SNAIC homepage and digital platform",
+        "link": {
+          "label": "View Capability Details",
+          "href": "./project.html?project=snaic-site"
+        }
+      },
+      {
+        "layout": "tile",
+        "slug": "rag-service",
+        "type": "project",
+        "title": "Backend RAG Service for SNAIC",
+        "description": "Reusable FastAPI retrieval-and-generation backend for SNAIC, combining vector search, multi-provider routing, auth, guardrails, and deployment-ready operations for chatbot and document-QA use cases.",
+        "tags": ["FastAPI", "RAG", "Qdrant", "Redis", "NVIDIA NIM"],
+        "image": "./assets/images/rag_service_home.png",
+        "imageAlt": "SNAIC bot interface powered by the backend RAG service",
+        "link": {
+          "label": "View Capability Details",
+          "href": "./project.html?project=rag-service"
+        }
+      },
+      {
+        "layout": "tile",
+        "slug": "forumaid",
+        "type": "project",
+        "title": "ForumAID: GenAI-Enhanced Discussion Forum",
+        "description": "EdTech discussion platform using RAG and high-context LLM workflows to summarize threads, highlight key arguments, and support more effective educator moderation in LMS environments.",
+        "tags": ["EdTech", "RAG", "LLM", "Semantic Search", "Python"],
+        "image": "./assets/images/forumaid_hero.webp",
+        "imageAlt": "ForumAID AI-enhanced online discussion interface",
+        "link": {
+          "label": "View Capability Details",
+          "href": "./project.html?project=forumaid"
         }
       }
     ]
