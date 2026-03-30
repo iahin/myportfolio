@@ -4,13 +4,9 @@
       "title": "Smart Lobby: Biometric Visitor Management System",
       "subtitle": "Full-stack visitor management proof of concept for IDEMIA, combining Android biometric onboarding, a local Node.js and MongoDB backend, Windows SmartGate simulation, and proprietary SDK integration.",
       "hashtags": [
-        "#Android",
         "#Biometrics",
-        "#NodeJS",
-        "#MongoDB",
-        "#VMS",
-        "#FullStack",
-        "#IDEMIA"
+        "#Backend",
+        "#Mobile"
       ],
       "backLink": {
         "label": "Back to Portfolio",
@@ -107,13 +103,9 @@
       "title": "SLADE: Smart Learning Analytics for Digital Crime",
       "subtitle": "Digital forensics platform for cybercrime investigation, combining forensic ingestion, knowledge graph intelligence, machine learning classification, and collaborative case management across hybrid deployment environments.",
       "hashtags": [
-        "#DigitalForensics",
-        "#CyberSecurity",
+        "#Cybersecurity",
         "#KnowledgeGraph",
-        "#MachineLearning",
-        "#Python",
-        "#ReactJS",
-        "#NRF"
+        "#Backend"
       ],
       "backLink": {
         "label": "Back to Portfolio",
@@ -136,7 +128,9 @@
       "glance": {
         "company": {
           "name": "Singapore Institute of Technology (SIT)",
-          "role": "Software Engineer"
+          "role": "Software Engineer",
+          "deliveredFor": "Custodio Technologies",
+          "deliveredForLabel": "Solution delivered for"
         },
         "links": {
           "title": "Links",
@@ -211,13 +205,9 @@
       "title": "Singapore Passport Application & Issuance Legacy Platform",
       "subtitle": "Feature delivery and backend enhancement work on NEC's existing proprietary application used in Singapore's passport-processing workflow, supporting biometric capture, workflow orchestration, and secure issuance operations in a regulated immigration environment.",
       "hashtags": [
-        "#Java",
-        "#Spring",
-        "#OracleDB",
-        "#IdentityManagement",
-        "#EnterpriseSoftware",
-        "#GovernmentSystems",
-        "#DevOps"
+        "#Enterprise",
+        "#Biometrics",
+        "#Backend"
       ],
       "backLink": {
         "label": "Back to Portfolio",
@@ -237,7 +227,9 @@
       "glance": {
         "company": {
           "name": "NEC Asia Pacific",
-          "role": "Software Engineer"
+          "role": "Software Engineer",
+          "deliveredFor": "Immigration & Checkpoints Authority of Singapore (ICA)",
+          "deliveredForLabel": "Solution delivered for"
         },
         "links": {
           "title": "Links",
@@ -304,15 +296,11 @@
     },
     "aidisa": {
       "title": "AIDISA: AI-Driven Intelligent Situation Awareness System",
-      "subtitle": "Full-stack operational analytics platform for SMRT, combining backend APIs, NLP workflows, GPT-assisted triage, and production delivery across Azure environments.",
+      "subtitle": "Full-stack operational analytics platform for Singapore Mass Rapid Transit (SMRT), combining backend APIs, NLP workflows, GPT-assisted triage, and production delivery across Azure environments.",
       "hashtags": [
         "#NLP",
-        "#LLM",
-        "#SentimentAnalysis",
-        "#Django",
-        "#NextJS",
-        "#Azure",
-        "#SMRT"
+        "#Analytics",
+        "#Backend"
       ],
       "backLink": {
         "label": "Back to Portfolio",
@@ -322,8 +310,8 @@
         "src": "./assets/images/aidisa_hero.webp"
       },
       "overview": {
-        "summary": "AiDiSA was built as an end-to-end operational analytics platform for SMRT, turning commuter feedback into real-time, actionable signals through AI-assisted classification, case routing, and situational awareness dashboards.",
-        "body": "SMRT teams were handling large volumes of commuter feedback across email, messaging, and other channels through manual review and triage. That slowed response cycles, made workload distribution uneven, and made it difficult to surface critical incidents early enough for operators to act quickly. I designed and delivered a modular full-stack platform that automated feedback processing, improved case assignment, and exposed real-time dashboards for operational teams and stakeholders."
+        "summary": "AiDiSA was built as an end-to-end operational analytics platform for Singapore Mass Rapid Transit (SMRT), turning commuter feedback into real-time, actionable signals through AI-assisted classification, case routing, and situational awareness dashboards.",
+        "body": "Singapore Mass Rapid Transit (SMRT) teams were handling large volumes of commuter feedback across email, messaging, and other channels through manual review and triage. That slowed response cycles, made workload distribution uneven, and made it difficult to surface critical incidents early enough for operators to act quickly. I designed and delivered a modular full-stack platform that automated feedback processing, improved case assignment, and exposed real-time dashboards for operational teams and stakeholders."
       },
       "architecture": {
         "intro": "When new feedback data arrived from IFS, it triggered the AiDiSA API layer to ingest and process the records through core modules covering case assignment, situational awareness, category classification, and sentiment analysis. The implementation combined Django REST Framework, FastAPI, PostgreSQL, Microsoft SQL Server, RabbitMQ, and AI tooling including a fine-tuned RoBERTa-based sentiment model and GPT-assisted workflows to support that end-to-end processing flow.",
@@ -337,7 +325,7 @@
           "name": "Singapore Institute of Technology",
           "note": "Built under SIT",
           "role": "Research Engineer (Full-Stack Developer)",
-          "deliveredFor": "SMRT",
+          "deliveredFor": "Singapore Mass Rapid Transit (SMRT)",
           "deliveredForLabel": "Solution delivered for"
         },
         "links": {
@@ -383,13 +371,13 @@
         ],
         "items": [
           {
-            "text": "Automated case assignment reduced manual queue handling effort for SMRT traffic controllers."
+            "text": "Automated case assignment reduced manual queue handling effort for Singapore Mass Rapid Transit (SMRT) traffic controllers."
           },
           {
             "text": "AI-driven severity tagging reduced critical incident flag time from 2 hours to 8 minutes."
           },
           {
-            "text": "Real-time dashboards gave operational visibility across three SMRT divisions for active users."
+            "text": "Real-time dashboards gave operational visibility across three Singapore Mass Rapid Transit (SMRT) divisions for active users."
           }
         ]
       },
@@ -420,13 +408,9 @@
       "title": "SIT x NVIDIA Joint AI Centre (SNAIC) Official Website",
       "subtitle": "Official public-facing website for the SIT x NVIDIA Joint AI Centre, built to establish industry presence, structure key centre information clearly, support sustainable content updates, improve discoverability, and turn interest into real enquiries.",
       "hashtags": [
-        "#NextJS",
-        "#GenerativeAI",
-        "#RAG",
-        "#Contentful",
-        "#AWSAmplify",
-        "#FastAPI",
-        "#SNAIC"
+        "#Website",
+        "#Frontend",
+        "#SEO"
       ],
       "backLink": {
         "label": "Back to Portfolio",
@@ -536,13 +520,9 @@
       "title": "Customizable AI Knowledge Base Service",
       "subtitle": "Secure multi-provider retrieval and generation backend for the SNAIC website, combining FastAPI, vector search, provider routing, and deployment-ready guardrails. This is an opensource solution that can be used for various products, from public-facing chatbots to internal knowledge tools and document Q&A applications.",
       "hashtags": [
-        "#FastAPI",
         "#RAG",
-        "#Qdrant",
-        "#Redis",
-        "#Nginx",
-        "#NVIDIANIM",
-        "#OpenAI"
+        "#Backend",
+        "#AIInfrastructure"
       ],
       "backLink": {
         "label": "Back to Portfolio",
@@ -647,11 +627,7 @@
       "hashtags": [
         "#EdTech",
         "#RAG",
-        "#LLM",
-        "#SemanticSearch",
-        "#Python",
-        "#Docker",
-        "#ForumAID"
+        "#Backend"
       ],
       "backLink": {
         "label": "Back to Portfolio",

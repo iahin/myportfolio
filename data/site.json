@@ -26,7 +26,7 @@
     "eyebrow": "Systems Architect & Humanist",
     "titlePrefix": "Hello, I'm Iz!",
     "titleStrong": "I am a Software Engineer.",
-    "summary": "I build software that turns messy operational problems into reliable products people can actually use. I work across full-stack, cloud, and applied AI, helping teams build practical, production-ready systems and useful AI capabilities that improve real workflows. Usually with coffee nearby ☕︎",
+    "summary": "I build software that turns messy operational problems into reliable products people can actually use. I work across full-stack, cloud, and applied AI, helping teams build practical, production-ready systems and useful AI capabilities that improve real workflows. I am passionate about bridging the gap between technical possibilities and real-world impact.",
     "image": "./assets/images/hero_image.jpg",
     "imageAlt": "Workspace desk with laptop and development environment",
     "stats": [
@@ -40,82 +40,12 @@
     "summary": "A selection of systems, tools, and platforms built across company and personal work, grounded in practical engineering, real operational contexts, and software that supports real users and real workflows.",
     "projects": [
       {
-        "layout": "featured",
-        "slug": "smart-lobby",
-        "type": "project",
-        "title": "Smart Lobby: Biometric Visitor Management System",
-        "description": "Full-stack visitor management proof of concept for IDEMIA, combining Android biometric onboarding, a local Node.js and MongoDB backend, and SmartGate simulation for security-critical environments.",
-        "tags": ["Android", "Biometrics", "Node.js", "MongoDB", "IDEMIA"],
-        "image": "./assets/images/idemia_main.png",
-        "imageAlt": "Smart Lobby biometric visitor management system presentation",
-        "link": {
-          "label": "View Capability Details",
-          "href": "./project.html?project=smart-lobby"
-        }
-      },
-      {
-        "layout": "stack",
-        "slug": "slade",
-        "type": "project",
-        "title": "SLADE: Smart Learning Analytics for Digital Crime",
-        "description": "Digital forensics platform built for cybercrime investigation, combining forensic ingestion, knowledge graph intelligence, machine learning classification, and collaborative case management across hybrid environments.",
-        "tags": ["Digital Forensics", "Knowledge Graph", "Machine Learning", "Python", "Cybersecurity"],
-        "image": "./assets/images/slade_overview.png",
-        "imageAlt": "SLADE digital forensics concept overview",
-        "link": {
-          "label": "View Capability Details",
-          "href": "./project.html?project=slade"
-        }
-      },
-      {
-        "layout": "code",
-        "slug": "nec",
-        "type": "project",
-        "title": "BioPass2: Singapore Immigration Identity & Access Platform",
-        "description": "Enterprise backend and identity workflow platform for Singapore immigration operations, combining secure onboarding, biometric integrations, Oracle data workflows, and regulated deployment support.",
-        "tags": ["Java", "Spring", "OracleDB", "Identity Management", "Government"],
-        "image": "./assets/images/nec_hero.png",
-        "imageAlt": "Singapore immigration identity and access platform context",
-        "link": {
-          "label": "View Capability Details",
-          "href": "./project.html?project=nec"
-        }
-      },
-      {
-        "layout": "tile",
-        "slug": "aidisa",
-        "type": "project",
-        "title": "AIDISA: AI-Driven Intelligent Situation Awareness System",
-        "description": "Operational analytics platform for SMRT, combining backend APIs, NLP workflows, GPT-assisted triage, dashboard alerting, and automated case assignment across Azure environments.",
-        "tags": ["NLP", "LLM", "Next.js", "Django", "Azure"],
-        "image": "./assets/images/aidisa_hero.webp",
-        "imageAlt": "AiDiSA team presenting operational dashboards",
-        "link": {
-          "label": "View Capability Details",
-          "href": "./project.html?project=aidisa"
-        }
-      },
-      {
-        "layout": "tile",
-        "slug": "snaic-site",
-        "type": "project",
-        "title": "SIT-NVIDIA Joint AI Centre (SNAIC) Official Website",
-        "description": "Industry-facing full-stack platform for SNAIC, combining headless content workflows, a RAG-powered chatbot, AWS-backed communication flows, and a polished project discovery experience.",
-        "tags": ["Next.js", "RAG", "Contentful", "AWS", "FastAPI"],
-        "image": "./assets/images/snaic_home.png",
-        "imageAlt": "SNAIC homepage and digital platform",
-        "link": {
-          "label": "View Capability Details",
-          "href": "./project.html?project=snaic-site"
-        }
-      },
-      {
         "layout": "tile",
         "slug": "rag-service",
         "type": "project",
-        "title": "Backend RAG Service for SNAIC",
-        "description": "Reusable FastAPI retrieval-and-generation backend for SNAIC, combining vector search, multi-provider routing, auth, guardrails, and deployment-ready operations for chatbot and document-QA use cases.",
-        "tags": ["FastAPI", "RAG", "Qdrant", "Redis", "NVIDIA NIM"],
+        "title": "Customizable AI Knowledge Base Service",
+        "description": "Reusable backend-only RAG service for chatbot and document-QA use cases, combining retrieval, provider abstraction, authentication, and deployment-ready operations.",
+        "tags": ["RAG", "Backend", "AI Infrastructure"],
         "image": "./assets/images/rag_service_home.png",
         "imageAlt": "SNAIC bot interface powered by the backend RAG service",
         "link": {
@@ -125,16 +55,86 @@
       },
       {
         "layout": "tile",
+        "slug": "snaic-site",
+        "type": "project",
+        "title": "SIT x NVIDIA Joint AI Centre (SNAIC) Official Website",
+        "description": "Official public-facing website for SNAIC, built to establish industry presence, improve discoverability, support sustainable CMS-driven updates, and convert interest into enquiries.",
+        "tags": ["Website", "Frontend", "SEO"],
+        "image": "./assets/images/snaic_home.png",
+        "imageAlt": "SNAIC homepage and digital platform",
+        "link": {
+          "label": "View Capability Details",
+          "href": "./project.html?project=snaic-site"
+        }
+      },
+      {
+        "layout": "tile",
         "slug": "forumaid",
         "type": "project",
         "title": "ForumAID: GenAI-Enhanced Discussion Forum",
-        "description": "EdTech discussion platform using RAG and high-context LLM workflows to summarize threads, highlight key arguments, and support more effective educator moderation in LMS environments.",
-        "tags": ["EdTech", "RAG", "LLM", "Semantic Search", "Python"],
+        "description": "EdTech discussion platform using retrieval and high-context AI workflows to support summarization, moderation, and more effective educator oversight in LMS environments.",
+        "tags": ["EdTech", "RAG", "Backend"],
         "image": "./assets/images/forumaid_hero.webp",
         "imageAlt": "ForumAID AI-enhanced online discussion interface",
         "link": {
           "label": "View Capability Details",
           "href": "./project.html?project=forumaid"
+        }
+      },
+      {
+        "layout": "tile",
+        "slug": "aidisa",
+        "type": "project",
+        "title": "AIDISA: AI-Driven Intelligent Situation Awareness System",
+        "description": "Operational analytics platform for Singapore Mass Rapid Transit (SMRT), combining AI-assisted feedback processing, category classification, alerting, and queue management across live operations.",
+        "tags": ["NLP", "Analytics", "Backend"],
+        "image": "./assets/images/aidisa_hero.webp",
+        "imageAlt": "AiDiSA team presenting operational dashboards",
+        "link": {
+          "label": "View Capability Details",
+          "href": "./project.html?project=aidisa"
+        }
+      },
+      {
+        "layout": "code",
+        "slug": "nec",
+        "type": "project",
+        "title": "Singapore Passport Application & Issuance Legacy Platform",
+        "description": "Backend enhancement and release support work on NEC's existing passport-processing application used in Singapore's regulated immigration workflow.",
+        "tags": ["Enterprise", "Biometrics", "Backend"],
+        "image": "./assets/images/nec_hero.png",
+        "imageAlt": "Singapore immigration identity and access platform context",
+        "link": {
+          "label": "View Capability Details",
+          "href": "./project.html?project=nec"
+        }
+      },
+      {
+        "layout": "stack",
+        "slug": "slade",
+        "type": "project",
+        "title": "SLADE: Smart Learning Analytics for Digital Crime",
+        "description": "Digital forensics platform combining case-graph intelligence, machine learning, and collaborative investigation workflows for cybercrime analysis.",
+        "tags": ["Cybersecurity", "Knowledge Graph", "Backend"],
+        "image": "./assets/images/slade_overview.png",
+        "imageAlt": "SLADE digital forensics concept overview",
+        "link": {
+          "label": "View Capability Details",
+          "href": "./project.html?project=slade"
+        }
+      },
+      {
+        "layout": "featured",
+        "slug": "smart-lobby",
+        "type": "project",
+        "title": "Smart Lobby: Biometric Visitor Management System",
+        "description": "Biometric visitor management proof of concept combining mobile onboarding, local backend coordination, and smart gate verification for security-critical environments.",
+        "tags": ["Biometrics", "Backend", "Mobile"],
+        "image": "./assets/images/idemia_main.png",
+        "imageAlt": "Smart Lobby biometric visitor management system presentation",
+        "link": {
+          "label": "View Capability Details",
+          "href": "./project.html?project=smart-lobby"
         }
       }
     ]
@@ -244,11 +244,11 @@
         "role": "Research Engineer (Full-Stack Developer)",
         "company": "Singapore Institute of Technology, Singapore",
         "accent": "secondary",
-        "summary": "Built and deployed AiDiSA for SMRT as an end-to-end analytics platform combining backend APIs, full-stack portal delivery, transformer-based NLP pipelines, and GPT-powered workflow automation for operational teams.",
+        "summary": "Built and deployed AiDiSA for Singapore Mass Rapid Transit (SMRT) as an end-to-end analytics platform combining backend APIs, full-stack portal delivery, transformer-based NLP pipelines, and GPT-powered workflow automation for operational teams.",
         "points": [
-          "Built and deployed AiDiSA, an end-to-end operational analytics platform for SMRT that automated commuter-feedback triage, case assignment, and real-time incident alerting across email, webforms, and internal systems.",
+          "Built and deployed AiDiSA, an end-to-end operational analytics platform for Singapore Mass Rapid Transit (SMRT) that automated commuter-feedback triage, case assignment, and real-time incident alerting across email, webforms, and internal systems.",
           "Developed backend services and APIs using Django REST Framework, FastAPI, PostgreSQL, MS SQL, RabbitMQ, OAuth2, and JWT, processing 100 to 500 feedback entries per day and supporting secure role-based access for 20+ users.",
-          "Led full-stack delivery of the portal using Next.js, Tailwind, and Power BI dashboards, improving operational visibility across three SMRT divisions and reducing manual case-assignment workload by 30%.",
+          "Led full-stack delivery of the portal using Next.js, Tailwind, and Power BI dashboards, improving operational visibility across three Singapore Mass Rapid Transit (SMRT) divisions and reducing manual case-assignment workload by 30%.",
           "Built and deployed local transformer-based NLP pipelines using PyTorch and Hugging Face Transformers, including domain-specific sentiment analysis datasets and real-time inference services optimized for Azure VM environments.",
           "Integrated GPT-powered severity classification and keyword extraction into live workflows, reducing manual feedback review time by 75% and enabling near real-time alerting for high-priority incidents."
         ],
