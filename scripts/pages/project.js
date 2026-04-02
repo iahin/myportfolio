@@ -1,8 +1,13 @@
 import { fetchProjectDetailData, fetchSiteData } from "../shared/site-data.js";
-import { renderError, setText, bindLink, escapeHtml } from "../shared/dom.js";
+import { renderError, setText, escapeHtml } from "../shared/dom.js";
+import { observeSectionViews, trackProjectView } from "../shared/analytics.js";
 
 const projectRoot = document.querySelector("#project-app");
 const projectTemplate = document.querySelector("#project-template");
+const PROJECT_BACK_LINK = {
+  href: "./index.html#projects",
+  label: "Back to Portfolio"
+};
 
 function getLinkIconSvg(item) {
   const icon = item.icon || "";
@@ -37,6 +42,46 @@ function getRequestedProjectSlug(projectData) {
   return Object.keys(projects)[0] || null;
 }
 
+function setOptionalText(root, field, value) {
+  const element = root.querySelector(`[data-field="${field}"]`);
+  if (!element) {
+    return;
+  }
+
+  if (typeof value === "string" && value.trim()) {
+    element.textContent = value;
+    element.hidden = false;
+    return;
+  }
+
+  element.textContent = "";
+  element.hidden = true;
+}
+
+function getGlanceRows(glance) {
+  if (Array.isArray(glance?.items) && glance.items.length) {
+    return glance.items.filter((item) => item?.label && item?.value);
+  }
+
+  const company = glance?.company || null;
+  const rows = [];
+
+  if (company?.role) {
+    rows.push({ label: "Role", value: company.role });
+  }
+  if (company?.name) {
+    rows.push({ label: "Company", value: company.name });
+  }
+  if (company?.deliveredFor) {
+    rows.push({
+      label: company.deliveredForLabel || "Delivered for",
+      value: company.deliveredFor
+    });
+  }
+
+  return rows;
+}
+
 async function loadProjectPage() {
   try {
     const [siteData, projectDetail] = await Promise.all([
@@ -50,13 +95,13 @@ async function loadProjectPage() {
       throw new Error("Requested project detail was not found.");
     }
 
-    renderProjectPage(siteData, detail);
+    renderProjectPage(siteData, detail, slug);
   } catch (error) {
     renderError(projectRoot, "Project data could not be loaded.", error);
   }
 }
 
-function renderProjectPage(data, detail) {
+function renderProjectPage(data, detail, slug) {
   document.title = data.site.meta?.projectTitle || detail.title || "Project Details";
   const metaDescription = document.querySelector('meta[name="description"]');
   if (metaDescription) {
@@ -68,28 +113,35 @@ function renderProjectPage(data, detail) {
 
   const fragment = projectTemplate.content.cloneNode(true);
 
-  bindLink(fragment.querySelector('[data-field="projectBackLink"]'), detail.backLink);
   const backLink = fragment.querySelector('[data-field="projectBackLink"]');
   if (backLink) {
+    backLink.href = PROJECT_BACK_LINK.href;
     backLink.innerHTML = `
       <span class="project-back-arrow" aria-hidden="true">
         <svg viewBox="0 0 24 24" focusable="false">
           <path d="M14.5 6 8.5 12l6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </span>
-      <span>${escapeHtml(detail.backLink.label)}</span>
+      <span>${escapeHtml(PROJECT_BACK_LINK.label)}</span>
     `;
   }
+  backLink?.addEventListener("click", () => {
+    window.gtag?.("event", "navigation_click", {
+      page_type: "project_detail",
+      destination: "home_projects",
+      project_name: detail.title,
+      project_slug: slug
+    });
+  });
 
   setText(fragment, "detailTitle", detail.title);
-  setText(fragment, "detailSubtitle", detail.subtitle);
-  setText(fragment, "overviewSummary", detail.overview.summary);
-  setText(fragment, "overviewBody", detail.overview.body);
-  setText(fragment, "architectureIntro", detail.architecture.intro);
-  setText(fragment, "architectureOutro", detail.architecture.outro);
-  setText(fragment, "impactTitle", detail.impact.title);
-  setText(fragment, "stacksTitle", detail.stacks.title);
-  setText(fragment, "stacksSummary", detail.stacks.summary);
+  setOptionalText(fragment, "detailSubtitle", detail.subtitle);
+  setOptionalText(fragment, "overviewSummary", detail.overview?.summary);
+  setOptionalText(fragment, "overviewBody", detail.overview?.body);
+  setOptionalText(fragment, "architectureIntro", detail.architecture?.intro);
+  setOptionalText(fragment, "impactTitle", detail.impact?.title);
+  setOptionalText(fragment, "stacksTitle", detail.stacks?.title);
+  setOptionalText(fragment, "stacksSummary", detail.stacks?.summary);
 
   const heroBanner = fragment.querySelector('[data-field="projectHeroBanner"]');
   if (heroBanner && detail.heroImage?.src) {
@@ -105,18 +157,19 @@ function renderProjectPage(data, detail) {
   });
 
   const glance = detail.glance || null;
-  const company = glance?.company || null;
-  setText(fragment, "detailRoleText", company?.role || "");
-  setText(fragment, "detailCompanyText", company?.name || "");
-
-  const clientRow = fragment.querySelector('[data-field="detailClientRow"]');
-  const clientLabel = fragment.querySelector('[data-field="detailClientLabel"]');
-  const clientText = fragment.querySelector('[data-field="detailClientText"]');
-  if (company?.deliveredFor) {
-    if (clientLabel) clientLabel.textContent = company.deliveredForLabel || "Delivered for";
-    if (clientText) clientText.textContent = company.deliveredFor;
-  } else if (clientRow) {
-    clientRow.hidden = true;
+  const glanceRowsRoot = fragment.querySelector('[data-field="detailGlanceRows"]');
+  const glanceRows = getGlanceRows(glance);
+  if (glanceRowsRoot) {
+    glanceRowsRoot.innerHTML = "";
+    glanceRows.forEach((item) => {
+      const row = document.createElement("div");
+      row.className = "project-side-meta-row";
+      row.innerHTML = `
+        <span class="project-side-label">${escapeHtml(item.label)}</span>
+        <strong class="project-side-value">${escapeHtml(item.value)}</strong>
+      `;
+      glanceRowsRoot.append(row);
+    });
   }
 
   const architectureImage = detail.architecture?.image;
@@ -244,6 +297,12 @@ function renderProjectPage(data, detail) {
   }
 
   projectRoot.replaceChildren(fragment);
+  trackProjectView(detail.title, slug, { page_type: "project_detail" });
+  observeSectionViews(projectRoot.querySelectorAll("[data-analytics-section]"), {
+    page_type: "project_detail",
+    project_name: detail.title,
+    project_slug: slug
+  });
 }
 
 loadProjectPage();

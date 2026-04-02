@@ -2809,7 +2809,8 @@ a:focus-visible {
 .gallery-lightbox-card img {
   width: 100%;
   max-height: 65vh;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--surface-container-lowest);
 }
 
 .gallery-lightbox-copy {

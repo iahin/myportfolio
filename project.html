@@ -40,18 +40,17 @@
         <section class="project-content-shell">
           <div class="project-content-grid">
             <div class="project-primary-column">
-              <section class="project-content-section">
+              <section class="project-content-section" data-analytics-section="overview">
                 <h2 class="project-content-title">Overview</h2>
                 <p class="project-content-lead" data-field="overviewSummary"></p>
                 <p class="project-content-body" data-field="overviewBody"></p>
               </section>
 
-              <section class="project-content-section">
+              <section class="project-content-section" data-analytics-section="technical_implementation">
                 <h2 class="project-content-title">Technical Implementation</h2>
                 <div class="project-architecture-block">
                   <div class="project-architecture-copy">
                     <p class="project-content-body" data-field="architectureIntro"></p>
-                    <p class="project-content-body" data-field="architectureOutro"></p>
                   </div>
                   <figure class="project-architecture-figure" data-field="architectureImage">
                     <button
@@ -66,29 +65,16 @@
                 </div>
               </section>
 
-              <section class="project-content-section">
+              <section class="project-content-section" data-analytics-section="gallery">
                 <h2 class="project-content-title">Gallery</h2>
                 <div class="gallery-grid gallery-grid-project" data-field="galleryItems"></div>
               </section>
             </div>
 
             <aside class="project-sidebar-column">
-              <section class="project-side-panel">
+              <section class="project-side-panel" data-analytics-section="at_a_glance">
                 <h2 class="project-side-panel-title">At a Glance</h2>
-                <div class="project-side-meta">
-                  <div class="project-side-meta-row">
-                    <span class="project-side-label">Role</span>
-                    <strong class="project-side-value" data-field="detailRoleText"></strong>
-                  </div>
-                  <div class="project-side-meta-row">
-                    <span class="project-side-label">Company</span>
-                    <strong class="project-side-value" data-field="detailCompanyText"></strong>
-                  </div>
-                  <div class="project-side-meta-row" data-field="detailClientRow">
-                    <span class="project-side-label" data-field="detailClientLabel"></span>
-                    <strong class="project-side-value" data-field="detailClientText"></strong>
-                  </div>
-                </div>
+                <div class="project-side-meta" data-field="detailGlanceRows"></div>
 
                 <div class="project-side-links" data-field="detailLinksBlock">
                   <h3 class="detail-links-title project-side-links-title" data-field="detailLinksTitle"></h3>
@@ -96,13 +82,13 @@
                 </div>
               </section>
 
-              <section class="project-side-panel">
+              <section class="project-side-panel" data-analytics-section="impact_and_results">
                 <h2 class="project-side-panel-title" data-field="impactTitle"></h2>
                 <div class="impact-metrics impact-metrics-sidebar" data-field="impactMetrics"></div>
                 <div class="impact-list impact-list-sidebar" data-field="impactItems"></div>
               </section>
 
-              <section class="project-side-panel">
+              <section class="project-side-panel" data-analytics-section="tech_stacks">
                 <h2 class="project-side-panel-title" data-field="stacksTitle"></h2>
                 <p class="project-side-note project-side-stack-summary" data-field="stacksSummary"></p>
                 <div class="detail-stack-badges detail-stack-badges-sidebar" data-field="stackBadges"></div>

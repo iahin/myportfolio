@@ -45,3 +45,11 @@ To match the current design system exactly without external requests, place thes
 ## GitHub Pages
 
 The repository already includes a static GitHub Pages workflow at [`.github/workflows/static.yml`](./.github/workflows/static.yml), and this scaffold works with it as-is.
+
+# Local Devlopement
+
+To run the site locally, you can use a simple static server. If you have Python installed, navigate to the project directory in your terminal and run:
+
+```bash
+python -m http.server 8088
+```

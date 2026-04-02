@@ -1,0 +1,103 @@
+{
+  "rag-service": {
+    "title": "Multipurpose AI Knowledge Base Service",
+    "subtitle": "Secure multi-provider retrieval and generation backend for the SNAIC website, combining FastAPI, vector search, provider routing, and deployment-ready guardrails. This is an opensource solution that can be used for various products, from public-facing chatbots to internal knowledge tools and document Q&A applications.",
+    "hashtags": ["#RAG", "#Backend", "#AIInfrastructure"],
+    "backLink": {
+      "label": "Back to Portfolio",
+      "href": "./index.html#projects"
+    },
+    "heroImage": {
+      "src": "./assets/images/rag_service_home.png"
+    },
+    "overview": {
+      "summary": "This RAG backend service was built to power the SNAIC site chatbot and serve as a opensource knowledge-delivery layer for various products like internal help tools, and document-question-answering workflows.",
+      "body": "Public visitors to the SNAIC website often needed quick answers about the centre itself: what it does, which projects and research areas it covers, how its technology domains differ, and how to engage with the team. Instead of forcing people to search across multiple pages or submit enquiries and wait for clarification, the site needed a chat experience that could answer common questions immediately, guide users to the right information, and do so safely for public-facing use. I designed the reusable backend so the same platform could support the website chatbot as well as future internal or branded knowledge assistants."
+    },
+    "architecture": {
+      "intro": "The service was implemented as a backend-only RAG platform built on FastAPI, with PostgreSQL handling core application data, Qdrant storing embedding vectors for similarity search, and Redis supporting rate limiting, caching, and request control. Documents were normalized, chunked, embedded, and then served through a shared retrieval-and-generation workflow, with provider adapters allowing the same backend to work across OpenAI, Gemini, Ollama, and similar model stacks.",
+      "image": {
+        "src": "./assets/images/rag_arch.png"
+      },
+      "outro": "Authentication and service access were handled through JWT bearer tokens and hashed API keys, while guardrails around quotas, prompt abuse, retrieval limits, and output control were kept in the service layer rather than left entirely to prompting. The platform was designed to run both through local Docker Compose and production-style ECS Fargate deployment with Nginx as the entry point, keeping the architecture practical to operate without exposing every internal route or security detail on the portfolio page."
+    },
+    "glance": {
+      "company": {
+        "name": "SIT x NVIDIA AI Centre(SNAIC)",
+        "role": "Research Engineer (Full-Stack AI Engineer)"
+      },
+      "links": {
+        "title": "Links",
+        "items": [
+          {
+            "label": "Live Production",
+            "href": "https://www.snaic.net/"
+          },
+          {
+            "label": "GitHub Repo",
+            "href": "https://github.com/iahin/backend_rag_multipurpose"
+          }
+        ]
+      }
+    },
+    "stacks": {
+      "title": "Tech Stacks",
+      "summary": "",
+      "badges": [
+        "FastAPI",
+        "PostgreSQL",
+        "Qdrant",
+        "Redis",
+        "Docker",
+        "Nginx",
+        "OpenAI",
+        "Gemini",
+        "Ollama",
+        "NVIDIA NIM",
+        "JWT",
+        "AWS ECS Fargate"
+      ]
+    },
+    "impact": {
+      "title": "Impact And Results",
+      "metrics": [
+        {
+          "value": "4",
+          "label": "LLM and embedding providers supported"
+        },
+        {
+          "value": "6",
+          "label": "file formats ingested"
+        },
+        {
+          "value": "20+",
+          "label": "documented API endpoints"
+        }
+      ],
+      "items": [
+        {
+          "text": "One ingestion-to-answer pipeline now supports website chat, internal tools, and future branded assistants."
+        },
+        {
+          "text": "JWT auth, hashed API keys, guardrails, and rate limits made the public-facing chatbot safer to operate."
+        },
+        {
+          "text": "Admin endpoints exposed chat activity, feedback, and model controls for ongoing tuning and governance."
+        }
+      ]
+    },
+    "gallery": {
+      "items": [
+        {
+          "src": "./assets/images/rag2.png"
+        },
+        {
+          "src": "./assets/images/rag_service_home1.png"
+        },
+        {
+          "src": "./assets/images/rag1.png"
+        }
+      ]
+    }
+  }
+}

@@ -42,100 +42,37 @@
       {
         "layout": "tile",
         "slug": "rag-service",
-        "type": "project",
-        "title": "Customizable AI Knowledge Base Service",
-        "description": "Reusable backend-only RAG service for chatbot and document-QA use cases, combining retrieval, provider abstraction, authentication, and deployment-ready operations.",
-        "tags": ["RAG", "Backend", "AI Infrastructure"],
-        "image": "./assets/images/rag_service_home.png",
-        "imageAlt": "SNAIC bot interface powered by the backend RAG service",
-        "link": {
-          "label": "View Capability Details",
-          "href": "./project.html?project=rag-service"
-        }
+        "type": "project"
       },
       {
         "layout": "tile",
         "slug": "snaic-site",
-        "type": "project",
-        "title": "SIT x NVIDIA Joint AI Centre (SNAIC) Official Website",
-        "description": "Official public-facing website for SNAIC, built to establish industry presence, improve discoverability, support sustainable CMS-driven updates, and convert interest into enquiries.",
-        "tags": ["Website", "Frontend", "SEO"],
-        "image": "./assets/images/snaic_home.png",
-        "imageAlt": "SNAIC homepage and digital platform",
-        "link": {
-          "label": "View Capability Details",
-          "href": "./project.html?project=snaic-site"
-        }
+        "type": "project"
       },
       {
         "layout": "tile",
         "slug": "forumaid",
-        "type": "project",
-        "title": "ForumAID: GenAI-Enhanced Discussion Forum",
-        "description": "EdTech discussion platform using retrieval and high-context AI workflows to support summarization, moderation, and more effective educator oversight in LMS environments.",
-        "tags": ["EdTech", "RAG", "Backend"],
-        "image": "./assets/images/forumaid_hero.webp",
-        "imageAlt": "ForumAID AI-enhanced online discussion interface",
-        "link": {
-          "label": "View Capability Details",
-          "href": "./project.html?project=forumaid"
-        }
+        "type": "project"
       },
       {
         "layout": "tile",
         "slug": "aidisa",
-        "type": "project",
-        "title": "AIDISA: AI-Driven Intelligent Situation Awareness System",
-        "description": "Operational analytics platform for Singapore Mass Rapid Transit (SMRT), combining AI-assisted feedback processing, category classification, alerting, and queue management across live operations.",
-        "tags": ["NLP", "Analytics", "Backend"],
-        "image": "./assets/images/aidisa_hero.webp",
-        "imageAlt": "AiDiSA team presenting operational dashboards",
-        "link": {
-          "label": "View Capability Details",
-          "href": "./project.html?project=aidisa"
-        }
+        "type": "project"
       },
       {
         "layout": "code",
         "slug": "nec",
-        "type": "project",
-        "title": "Singapore Passport Application & Issuance Legacy Platform",
-        "description": "Backend enhancement and release support work on NEC's existing passport-processing application used in Singapore's regulated immigration workflow.",
-        "tags": ["Enterprise", "Biometrics", "Backend"],
-        "image": "./assets/images/nec_hero.png",
-        "imageAlt": "Singapore immigration identity and access platform context",
-        "link": {
-          "label": "View Capability Details",
-          "href": "./project.html?project=nec"
-        }
+        "type": "project"
       },
       {
         "layout": "stack",
         "slug": "slade",
-        "type": "project",
-        "title": "SLADE: Smart Learning Analytics for Digital Crime",
-        "description": "Digital forensics platform combining case-graph intelligence, machine learning, and collaborative investigation workflows for cybercrime analysis.",
-        "tags": ["Cybersecurity", "Knowledge Graph", "Backend"],
-        "image": "./assets/images/slade_overview.png",
-        "imageAlt": "SLADE digital forensics concept overview",
-        "link": {
-          "label": "View Capability Details",
-          "href": "./project.html?project=slade"
-        }
+        "type": "project"
       },
       {
         "layout": "featured",
         "slug": "smart-lobby",
-        "type": "project",
-        "title": "Smart Lobby: Biometric Visitor Management System",
-        "description": "Biometric visitor management proof of concept combining mobile onboarding, local backend coordination, and smart gate verification for security-critical environments.",
-        "tags": ["Biometrics", "Backend", "Mobile"],
-        "image": "./assets/images/idemia_main.png",
-        "imageAlt": "Smart Lobby biometric visitor management system presentation",
-        "link": {
-          "label": "View Capability Details",
-          "href": "./project.html?project=smart-lobby"
-        }
+        "type": "project"
       }
     ]
   },

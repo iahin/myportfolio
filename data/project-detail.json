@@ -5,26 +5,15 @@
       "subtitle": "Full-stack visitor management proof of concept for IDEMIA, combining Android biometric onboarding, a local Node.js and MongoDB backend, Windows SmartGate simulation, and proprietary SDK integration.",
       "hashtags": [
         "#Biometrics",
-        "#Backend",
+        "#FullStack",
         "#Mobile"
       ],
-      "backLink": {
-        "label": "Back to Portfolio",
-        "href": "./index.html#projects"
-      },
       "heroImage": {
         "src": "./assets/images/idemia_main.png"
       },
       "overview": {
         "summary": "Smart Lobby was a proof-of-concept visitor management system built for IDEMIA's Public Security and Identity division to replace manual lobby registration with a fully digital, biometric-driven onboarding and access control flow across mobile, kiosk, and smart gate surfaces.",
         "body": "Security-critical sites still depended on manual RFID registration and receptionist-led visitor processing, which was slow, error-prone, and blind to back-door vulnerabilities. Evaluated competitor systems did not provide mobile biometric onboarding, in-premise location tracking, or a receptionist-free access workflow. I built a multi-surface system covering a Digital ID Android app, concierge kiosk flow, SmartGate simulation, and a local Node.js plus MongoDB backend that kept biometric data fully on-premise."
-      },
-      "architecture": {
-        "intro": "Smart Lobby was implemented across three main parts: an Android app for host, guest, and concierge flows, an M.Face-based smart gate simulation on Windows, and a locally hosted Node.js backend with MongoDB to keep data shared across all touchpoints.",
-        "image": {
-          "src": "./assets/images/idemia_arch1.png"
-        },
-        "outro": "The mobile layer integrated IDEMIA biometric and passport-scanning SDKs together with QR support, while the Windows side handled gate verification through IDEMIA's Proprietary Facial Scanner SDK integration. Everything stayed on the local network to support privacy, with supporting services used only to connect devices and keep the overall setup practical to deploy."
       },
       "glance": {
         "company": {
@@ -34,6 +23,12 @@
         "links": {
           "title": "Links",
           "items": []
+        }
+      },
+      "architecture": {
+        "intro": "Smart Lobby was implemented across three main parts: an Android app for host, guest, and concierge flows, an M.Face-based smart gate simulation on Windows, and a locally hosted Node.js backend with MongoDB to keep data shared across all touchpoints. The mobile layer integrated IDEMIA biometric and passport-scanning SDKs together with QR support, while the Windows side handled gate verification through IDEMIA's Proprietary Facial Scanner SDK integration. Everything stayed on the local network to support privacy, with supporting services used only to connect devices and keep the overall setup practical to deploy.",
+        "image": {
+          "src": "./assets/images/idemia_arch1.png"
         }
       },
       "stacks": {
@@ -107,23 +102,12 @@
         "#KnowledgeGraph",
         "#Backend"
       ],
-      "backLink": {
-        "label": "Back to Portfolio",
-        "href": "./index.html#projects"
-      },
       "heroImage": {
         "src": "./assets/images/slade_overview.png"
       },
       "overview": {
         "summary": "SLADE was a TRL7-ready digital forensics platform developed under Singapore's National Cybersecurity R&D Programme to automate cybercrime investigation from forensic artifact ingestion and chain-of-custody hashing through knowledge graph intelligence and collaborative case management.",
         "body": "Investigators were dealing with disk images, memory dumps, and multi-source logs using fragmented tools that could analyse events but could not connect forensic evidence, contextual crime intelligence, collaborative workflows, and court-admissible handling in one operational system. I helped deliver SLADE across its forensic ingestion, graph intelligence, and collaborative investigation layers so the platform could support real investigative workflows with less preparation overhead."
-      },
-      "architecture": {
-        "intro": "SLADE's technical implementation centered on a case-graph pipeline where investigation data was normalized into connected graph structures, transformed into machine-readable features with tools such as NetworkX and graph2vec, and then passed into PyTorch-based inference workflows for classification and investigative prediction.",
-        "image": {
-          "src": "./assets/images/slade_pipeline.png"
-        },
-        "outro": "Validated outputs were reviewed by domain experts before being fed back into the learning workflow, while FastAPI, Elasticsearch, Splunk, React, D3.js, Docker, Jenkins, and the Windows Server environment supported delivery, visibility, and repeatable deployment across the wider SLADE platform."
       },
       "glance": {
         "company": {
@@ -135,6 +119,12 @@
         "links": {
           "title": "Links",
           "items": []
+        }
+      },
+      "architecture": {
+        "intro": "SLADE's technical implementation centered on a case-graph pipeline where investigation data was normalized into connected graph structures, transformed into machine-readable features with tools such as NetworkX and graph2vec, and then passed into PyTorch-based inference workflows for classification and investigative prediction. Validated outputs were reviewed by domain experts before being fed back into the learning workflow, while FastAPI, Elasticsearch, Splunk, React, D3.js, Docker, Jenkins, and the Windows Server environment supported delivery, visibility, and repeatable deployment across the wider SLADE platform.",
+        "image": {
+          "src": "./assets/images/slade_pipeline.png"
         }
       },
       "stacks": {
@@ -209,20 +199,12 @@
         "#Biometrics",
         "#Backend"
       ],
-      "backLink": {
-        "label": "Back to Portfolio",
-        "href": "./index.html#projects"
-      },
       "heroImage": {
         "src": "./assets/images/nec_hero.png"
       },
       "overview": {
         "summary": "This was an existing NEC proprietary legacy application used in Singapore's passport application and issuance lifecycle, covering application intake, biometric capture, backend processing, secure handoff to personalization systems, and final collection through service counters.",
         "body": "Citizens could apply through online, postal, overseas, or counter-based channels, with personal details and biometrics such as facial image, fingerprints, and iris data captured as part of the process. I was part of the development team enhancing backend workflows, implementing features, and supporting releases so the existing application could continue to operate reliably in a tightly controlled operational environment."
-      },
-      "architecture": {
-        "intro": "The technical implementation built on NEC's existing legacy immigration control application stack, using Java, JSP, Spring, Hibernate, OracleDB 19c, PL/SQL, and REST-based integrations to support passport application processing, biometric workflows, and secure identity-related operations in Singapore's regulated environment.",
-        "outro": "My work focused on feature enhancements, onboarding and provisioning logic, SQL and PL/SQL improvements, OAuth-secured integrations, deployment automation, and production support across WebSphere 8.5, Apache Tomcat, VMware-hosted Windows Server environments, and supporting tools such as Maven, shell scripting, VBScript, Postman, JConsole, Git, and Jira. The description here stays intentionally high-level rather than exposing internal application specifics."
       },
       "glance": {
         "company": {
@@ -235,6 +217,9 @@
           "title": "Links",
           "items": []
         }
+      },
+      "architecture": {
+        "intro": "The technical implementation built on NEC's existing legacy immigration control application stack, using Java, JSP, Spring, Hibernate, OracleDB 19c, PL/SQL, and REST-based integrations to support passport application processing, biometric workflows, and secure identity-related operations in Singapore's regulated environment. My work focused on feature enhancements, onboarding and provisioning logic, SQL and PL/SQL improvements, OAuth-secured integrations, deployment automation, and production support across WebSphere 8.5, Apache Tomcat, VMware-hosted Windows Server environments, and supporting tools such as Maven, shell scripting, VBScript, Postman, JConsole, Git, and Jira. The description here stays intentionally high-level rather than exposing internal application specifics."
       },
       "stacks": {
         "title": "Tech Stacks",
@@ -298,14 +283,11 @@
       "title": "AIDISA: AI-Driven Intelligent Situation Awareness System",
       "subtitle": "Full-stack operational analytics platform for Singapore Mass Rapid Transit (SMRT), combining backend APIs, NLP workflows, GPT-assisted triage, and production delivery across Azure environments.",
       "hashtags": [
+        "Transportation",
         "#NLP",
         "#Analytics",
-        "#Backend"
+        "#FullStack"
       ],
-      "backLink": {
-        "label": "Back to Portfolio",
-        "href": "./index.html#projects"
-      },
       "heroImage": {
         "src": "./assets/images/aidisa_hero.webp"
       },
@@ -313,17 +295,9 @@
         "summary": "AiDiSA was built as an end-to-end operational analytics platform for Singapore Mass Rapid Transit (SMRT), turning commuter feedback into real-time, actionable signals through AI-assisted classification, case routing, and situational awareness dashboards.",
         "body": "Singapore Mass Rapid Transit (SMRT) teams were handling large volumes of commuter feedback across email, messaging, and other channels through manual review and triage. That slowed response cycles, made workload distribution uneven, and made it difficult to surface critical incidents early enough for operators to act quickly. I designed and delivered a modular full-stack platform that automated feedback processing, improved case assignment, and exposed real-time dashboards for operational teams and stakeholders."
       },
-      "architecture": {
-        "intro": "When new feedback data arrived from IFS, it triggered the AiDiSA API layer to ingest and process the records through core modules covering case assignment, situational awareness, category classification, and sentiment analysis. The implementation combined Django REST Framework, FastAPI, PostgreSQL, Microsoft SQL Server, RabbitMQ, and AI tooling including a fine-tuned RoBERTa-based sentiment model and GPT-assisted workflows to support that end-to-end processing flow.",
-        "image": {
-          "src": "./assets/images/aidisa_arch.png"
-        },
-        "outro": "Severity and sentiment outputs were stored for downstream use, with critical cases triggering notifications and dashboard updates, while category results were sent back into the wider operational flow. End users accessed live queue and situational views through the AiDiSA portal, and historical reporting through Power BI backed by stored classification data. Deployment tooling such as Docker, Azure VM, and GitHub Actions kept the platform practical for live use without exposing deeper backend internals here."
-      },
       "glance": {
         "company": {
           "name": "Singapore Institute of Technology",
-          "note": "Built under SIT",
           "role": "Research Engineer (Full-Stack Developer)",
           "deliveredFor": "Singapore Mass Rapid Transit (SMRT)",
           "deliveredForLabel": "Solution delivered for"
@@ -331,6 +305,12 @@
         "links": {
           "title": "Links",
           "items": []
+        }
+      },
+      "architecture": {
+        "intro": "When new feedback data arrived from IFS, it triggered the AiDiSA API layer to ingest and process the records through core modules covering case assignment, situational awareness, category classification, and sentiment analysis. The implementation combined Django REST Framework, FastAPI, PostgreSQL, Microsoft SQL Server, RabbitMQ, and AI tooling including a fine-tuned RoBERTa-based sentiment model and GPT-assisted workflows to support that end-to-end processing flow. Severity and sentiment outputs were stored for downstream use, with critical cases triggering notifications and dashboard updates, while category results were sent back into the wider operational flow. End users accessed live queue and situational views through the AiDiSA portal, and historical reporting through Power BI backed by stored classification data. Deployment tooling such as Docker, Azure VM, and GitHub Actions kept the platform practical for live use without exposing deeper backend internals here.",
+        "image": {
+          "src": "./assets/images/aidisa_arch.png"
         }
       },
       "stacks": {
@@ -408,27 +388,16 @@
       "title": "SIT x NVIDIA Joint AI Centre (SNAIC) Official Website",
       "subtitle": "Official public-facing website for the SIT x NVIDIA Joint AI Centre, built to establish industry presence, structure key centre information clearly, support sustainable content updates, improve discoverability, and turn interest into real enquiries.",
       "hashtags": [
-        "#Website",
+        "#Branding",
         "#Frontend",
-        "#SEO"
+        "#ContentManagement"
       ],
-      "backLink": {
-        "label": "Back to Portfolio",
-        "href": "./index.html#projects"
-      },
       "heroImage": {
         "src": "./assets/images/snaic_home.png"
       },
       "overview": {
         "summary": "The SNAIC website was built to establish the centre's official presence for public visitors and industry collaborators, while presenting its mission, projects, team, committees, news, and engagement pathways in a more structured and credible way.",
         "body": "The centre needed more than a simple informational website. It needed a professional public-facing platform that could make SNAIC easier to find online, keep content updates sustainable through a headless CMS, and create a direct conversion path from interest to enquiry through clear contact flows. I delivered a full-stack site that helped position SNAIC as a scalable, industry-ready centre rather than just an internal academic initiative."
-      },
-      "architecture": {
-        "intro": "The production architecture centered on a Next.js application hosted on AWS Amplify, where React-based pages handled the public website experience across Home, Projects, News, Publications, Team, About, and Contact. Contentful served as the structured content source for projects, news, publications, and team data, while the frontend also integrated services such as Google Analytics and Google Maps where needed.",
-        "image": {
-          "src": "./assets/images/snaicsite_arch.png"
-        },
-        "outro": "Form submissions were handled through Next.js API routes, with Google reCAPTCHA used for verification and AWS SES handling notification emails. This setup kept the site production-ready and easier to maintain, while giving non-technical stakeholders a sustainable CMS-driven workflow without exposing unnecessary backend complexity on the portfolio page."
       },
       "glance": {
         "company": {
@@ -443,6 +412,12 @@
               "href": "https://www.snaic.net/"
             }
           ]
+        }
+      },
+      "architecture": {
+        "intro": "The production architecture centered on a Next.js application hosted on AWS Amplify, where React-based pages handled the public website experience across Home, Projects, News, Publications, Team, About, and Contact. Contentful served as the structured content source for projects, news, publications, and team data, while the frontend also integrated services such as Google Analytics and Google Maps where needed. Form submissions were handled through Next.js API routes, with Google reCAPTCHA used for verification and AWS SES handling notification emails. This setup kept the site production-ready and easier to maintain, while giving non-technical stakeholders a sustainable CMS-driven workflow without exposing unnecessary backend complexity on the portfolio page.",
+        "image": {
+          "src": "./assets/images/snaicsite_arch.png"
         }
       },
       "stacks": {
@@ -517,48 +492,49 @@
       }
     },
     "rag-service": {
-      "title": "Customizable AI Knowledge Base Service",
-      "subtitle": "Secure multi-provider retrieval and generation backend for the SNAIC website, combining FastAPI, vector search, provider routing, and deployment-ready guardrails. This is an opensource solution that can be used for various products, from public-facing chatbots to internal knowledge tools and document Q&A applications.",
+      "title": "Multipurpose AI Knowledge Base Service",
+      "subtitle": "A production-oriented RAG chatbot backend API service built as a secure and highly customizable foundation for AI assistant solutions across websites, internal company tools, support platforms, and domain-specific business applications.",
       "hashtags": [
+        "KnowledgeBase",
         "#RAG",
         "#Backend",
-        "#AIInfrastructure"
+        "#AIPlatforms"
       ],
-      "backLink": {
-        "label": "Back to Portfolio",
-        "href": "./index.html#projects"
-      },
       "heroImage": {
         "src": "./assets/images/rag_service_home.png"
       },
       "overview": {
-        "summary": "This RAG backend service was built to power the SNAIC site chatbot and serve as a opensource knowledge-delivery layer for various products like internal help tools, and document-question-answering workflows.",
-        "body": "Public visitors to the SNAIC website often needed quick answers about the centre itself: what it does, which projects and research areas it covers, how its technology domains differ, and how to engage with the team. Instead of forcing people to search across multiple pages or submit enquiries and wait for clarification, the site needed a chat experience that could answer common questions immediately, guide users to the right information, and do so safely for public-facing use. I designed the reusable backend so the same platform could support the website chatbot as well as future internal or branded knowledge assistants."
-      },
-      "architecture": {
-        "intro": "The service was implemented as a backend-only RAG platform built on FastAPI, with PostgreSQL handling core application data, Qdrant storing embedding vectors for similarity search, and Redis supporting rate limiting, caching, and request control. Documents were normalized, chunked, embedded, and then served through a shared retrieval-and-generation workflow, with provider adapters allowing the same backend to work across OpenAI, Gemini, Ollama, and similar model stacks.",
-        "image": {
-          "src": "./assets/images/rag_arch.png"
-        },
-        "outro": "Authentication and service access were handled through JWT bearer tokens and hashed API keys, while guardrails around quotas, prompt abuse, retrieval limits, and output control were kept in the service layer rather than left entirely to prompting. The platform was designed to run both through local Docker Compose and production-style ECS Fargate deployment with Nginx as the entry point, keeping the architecture practical to operate without exposing every internal route or security detail on the portfolio page."
+        "summary": "A production-oriented RAG chatbot backend API service built as a secure and highly customizable foundation for AI assistant solutions across websites, internal company tools, support platforms, and domain-specific business applications. It enables organizations to ingest documents, retrieve relevant knowledge, and generate grounded conversational responses through a scalable architecture designed for integration into real-world products. With support for authentication, semantic search, caching, rate limiting, configurable model selection, and multi-provider orchestration across OpenAI, Gemini, Ollama, and NVIDIA NIM, it is well suited for internal knowledge assistants, website chatbots, enterprise helpdesks, and other retrieval-driven AI experiences."
       },
       "glance": {
-        "company": {
-          "name": "SIT x NVIDIA AI Centre(SNAIC)",
-          "role": "Research Engineer (Full-Stack AI Engineer)"
-        },
+        "items": [
+          {
+            "label": "Ownership",
+            "value": "Independent product build"
+          },
+          {
+            "label": "Positioning",
+            "value": "API-first AI platform"
+          },
+          {
+            "label": "Use case",
+            "value": "Enterprise knowledge workflows"
+          }
+        ],
         "links": {
           "title": "Links",
           "items": [
-            {
-              "label": "Live Production",
-              "href": "https://www.snaic.net/"
-            },
             {
               "label": "GitHub Repo",
               "href": "https://github.com/iahin/backend_rag_multipurpose"
             }
           ]
+        }
+      },
+      "architecture": {
+        "intro": "The project is a backend-only RAG chatbot service designed with several runtime dependencies. At its core, it uses FastAPI as the application layer, while PostgreSQL serves as the primary data store. For embedding storage and similarity search, Qdrant is integrated, and Redis is employed to handle rate limiting, caching, and optional session state management. The system also includes provider adapters that support OpenAI, Gemini, and Ollama, ensuring flexibility across different AI models. Security is enforced through JWT bearer authentication and hashed API keys, providing robust protection for user access and data.",
+        "image": {
+          "src": "./assets/images/rag_arch.png"
         }
       },
       "stacks": {
@@ -576,7 +552,8 @@
           "Ollama",
           "NVIDIA NIM",
           "JWT",
-          "AWS ECS Fargate"
+          "AWS ECS Fargate",
+          "Langsmith"
         ]
       },
       "impact": {
@@ -610,13 +587,13 @@
       "gallery": {
         "items": [
           {
+            "src": "./assets/images/rag1.png"
+          },
+          {
             "src": "./assets/images/rag2.png"
           },
           {
-            "src": "./assets/images/rag_service_home1.png"
-          },
-          {
-            "src": "./assets/images/rag1.png"
+            "src": "./assets/images/rag3.png"
           }
         ]
       }
@@ -625,24 +602,16 @@
       "title": "ForumAID: GenAI-Enhanced Discussion Forum",
       "subtitle": "An intelligent EdTech platform using RAG and high-context LLM workflows to automate forum moderation, synthesize key discussion themes, and support stronger collaborative learning.",
       "hashtags": [
-        "#EdTech",
+        "#EduTech",
         "#RAG",
-        "#Backend"
+        "#DevOps"
       ],
-      "backLink": {
-        "label": "Back to Portfolio",
-        "href": "./index.html#projects"
-      },
       "heroImage": {
         "src": "./assets/images/forumaid_hero.webp"
       },
       "overview": {
         "summary": "ForumAID was designed to improve asynchronous online discussions by using Generative AI to consolidate themes, surface key arguments, and suggest follow-up prompts that help educators guide higher-quality dialogue.",
         "body": "Online discussion forums are valuable for collaborative learning, but instructors often need to manually review long threads, identify meaningful contributions, and keep discussions moving. That creates moderation overhead, delayed responses, and fragmented student engagement. I contributed backend delivery and integration work that helped turn the retrieval-based AI workflow into something usable for real LMS discussion pilots."
-      },
-      "architecture": {
-        "intro": "ForumAID combined Python-based backend delivery, retrieval workflows, vector search, Docker-based setup, and high-context LLM tooling to support grounded summaries and prompts for discussion moderation.",
-        "outro": "The technical approach stayed focused on dependable pilot delivery and LMS compatibility, while keeping the project page at a stack-and-capability level rather than exposing internal implementation specifics."
       },
       "glance": {
         "company": {
@@ -652,6 +621,12 @@
         "links": {
           "title": "Links",
           "items": []
+        }
+      },
+      "architecture": {
+        "intro": "ForumAID combined Python-based backend delivery, retrieval workflows, vector search, Docker-based setup, and high-context LLM tooling to support grounded summaries and prompts for discussion moderation. The technical approach stayed focused on dependable pilot delivery and LMS compatibility, while keeping the project page at a stack-and-capability level rather than exposing internal implementation specifics.",
+        "image": {
+          "src": "./assets/images/forumaid_arch.png"
         }
       },
       "stacks": {
@@ -710,7 +685,12 @@
       },
       "gallery": {
         "items": [
-          
+          {
+            "src": "./assets/images/forumaid1.png"
+          },
+          {
+            "src": "./assets/images/forumaid2.png"
+          }
         ]
       }
     }

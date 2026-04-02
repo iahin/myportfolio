@@ -1,3 +1,5 @@
+import { trackSectionClick } from "../shared/analytics.js";
+
 export function navHrefForHome(item) {
   return item.href;
 }
@@ -48,6 +50,10 @@ export function attachNavigationState(root = document) {
         const target = document.querySelector(href);
         if (target) {
           event.preventDefault();
+          trackSectionClick(link.textContent || href, {
+            page_type: "home",
+            destination_section: href.replace(/^#/, "")
+          });
           pendingHref = href;
           pendingUntil = Date.now() + 1200;
           setActiveLink(links, href);
@@ -61,6 +67,12 @@ export function attachNavigationState(root = document) {
           window.history.replaceState(null, "", href);
           return;
         }
+      }
+      if (href) {
+        trackSectionClick(link.textContent || href, {
+          page_type: "home",
+          destination_section: href.replace(/^#/, "")
+        });
       }
       setActiveLink(links, href);
     });
