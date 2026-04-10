@@ -2224,9 +2224,9 @@ img {
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 1.5rem;
   align-items: center;
-  margin-bottom: 2rem;
-  padding: 1.6rem 1.7rem;
-  border-radius: 0.95rem;
+  margin-bottom: 0;
+  padding: 1.8rem 1.7rem 2.8rem;
+  border-radius: 0.95rem 0.95rem 0 0;
   background:
     linear-gradient(135deg, rgba(232, 239, 243, 0.92), rgba(219, 231, 237, 0.72)),
     radial-gradient(circle at top right, rgba(0, 83, 219, 0.1), transparent 42%);
@@ -2267,8 +2267,34 @@ img {
   line-height: 1.7;
 }
 
-.services-promo-link {
-  min-width: 11rem;
+.services-promo-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.15rem;
+  min-width: 12rem;
+  padding: 0 1.25rem;
+  border-radius: 999px;
+  background: rgba(42, 52, 57, 0.9);
+  color: #ffffff;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 14px 30px rgba(42, 52, 57, 0.14);
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+.services-promo-button:hover,
+.services-promo-button:focus-visible {
+  background: #1f282d;
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 18px 34px rgba(42, 52, 57, 0.18);
 }
 
 .services-top-nav {

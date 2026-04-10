@@ -497,7 +497,7 @@
       "hashtags": [
         "KnowledgeBase",
         "#RAG",
-        "#Backend",
+        "#FullStack",
         "#AIPlatforms"
       ],
       "heroImage": {
@@ -509,8 +509,8 @@
       "glance": {
         "items": [
           {
-            "label": "Ownership",
-            "value": "Independent product build"
+            "label": "Company",
+            "value": "SIT x NVIDIA AI Centre (SNAIC)"
           },
           {
             "label": "Positioning",

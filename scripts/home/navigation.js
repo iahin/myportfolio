@@ -83,6 +83,31 @@ export function attachNavigationState(root = document) {
     setActiveLink(links, hash);
   };
 
+  const findActiveSection = (sections, navOffset) => {
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
+    const anchorY = Math.min(navOffset + Math.max(viewportHeight * 0.28, 96), viewportHeight - 48);
+    const sectionMetrics = sections.map((section) => {
+      const rect = section.getBoundingClientRect();
+      return {
+        section,
+        top: rect.top,
+        bottom: rect.bottom
+      };
+    });
+
+    const containingSection = sectionMetrics.find(({ top, bottom }) => top <= anchorY && bottom > anchorY);
+    if (containingSection) {
+      return containingSection.section;
+    }
+
+    const passedSections = sectionMetrics.filter(({ top }) => top <= anchorY);
+    if (passedSections.length) {
+      return passedSections[passedSections.length - 1].section;
+    }
+
+    return sectionMetrics[0]?.section || null;
+  };
+
   const updateFromScroll = () => {
     if (!sections.length) {
       return;
@@ -91,7 +116,6 @@ export function attachNavigationState(root = document) {
     const navOffset = parseFloat(
       getComputedStyle(document.documentElement).getPropertyValue("--nav-offset")
     ) || 0;
-    const referenceY = window.scrollY + navOffset + 24;
     const scrollBottom = window.scrollY + window.innerHeight;
     const documentBottom = document.documentElement.scrollHeight;
 
@@ -103,26 +127,13 @@ export function attachNavigationState(root = document) {
       return;
     }
 
-    let activeSection = sections[0];
-    sections.forEach((section) => {
-      if (section.offsetTop <= referenceY) {
-        activeSection = section;
-      }
-    });
-
-    const lastSection = sections[sections.length - 1];
-    if (
-      lastSection &&
-      scrollBottom >= lastSection.offsetTop + Math.min(lastSection.offsetHeight * 0.25, 160)
-    ) {
-      activeSection = lastSection;
-    }
+    let activeSection = findActiveSection(sections, navOffset) || sections[0];
 
     if (pendingHref && Date.now() < pendingUntil) {
       const pendingSection = document.querySelector(pendingHref);
       if (pendingSection) {
-        const pendingTop = pendingSection.offsetTop - navOffset;
-        if (Math.abs(window.scrollY - pendingTop) > 20) {
+        const pendingRect = pendingSection.getBoundingClientRect();
+        if (pendingRect.top > navOffset + 12 || pendingRect.bottom <= navOffset + 12) {
           setActiveLink(links, pendingHref);
           return;
         }
