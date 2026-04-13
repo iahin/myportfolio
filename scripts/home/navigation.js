@@ -12,6 +12,17 @@ export function navOrInternalHref(href) {
   return href;
 }
 
+function syncNavigationOffset(root = document) {
+  const nav = root.querySelector(".top-nav") || document.querySelector(".top-nav");
+  if (!nav) {
+    return;
+  }
+
+  const navHeight = Math.ceil(nav.getBoundingClientRect().height);
+  const navOffset = Math.max(navHeight + 8, 60);
+  document.documentElement.style.setProperty("--nav-offset", `${navOffset}px`);
+}
+
 export function renderNavigation(fragment, data) {
   const navRoot = fragment.querySelector('[data-field="navLinks"]');
   data.navigation.links.forEach((item, index) => {
@@ -31,6 +42,8 @@ function setActiveLink(links, href) {
 }
 
 export function attachNavigationState(root = document) {
+  syncNavigationOffset(root);
+
   const links = [...root.querySelectorAll(".nav-links .nav-link")];
   if (!links.length) {
     return;
@@ -152,7 +165,18 @@ export function attachNavigationState(root = document) {
 
   window.addEventListener("hashchange", applyFromHash);
   window.addEventListener("scroll", updateFromScroll, { passive: true });
-  window.addEventListener("resize", updateFromScroll);
+  window.addEventListener("resize", () => {
+    syncNavigationOffset(root);
+    updateFromScroll();
+  });
+
+  document.fonts?.ready
+    ?.then(() => {
+      syncNavigationOffset(root);
+      updateFromScroll();
+    })
+    .catch(() => {});
+
   applyFromHash();
   updateFromScroll();
 }

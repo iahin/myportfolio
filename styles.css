@@ -2693,14 +2693,7 @@ a:focus-visible {
   .nav-links {
     display: flex;
     max-width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .nav-links::-webkit-scrollbar {
-    display: none;
+    flex-wrap: wrap;
   }
 
   .projects-grid,
@@ -2820,20 +2813,27 @@ a:focus-visible {
   }
 
   .nav-links {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(100%, 30rem);
+    overflow: visible;
     gap: 0.35rem;
     padding: 0.38rem;
-    border-radius: 1rem;
+    border-radius: 1.1rem;
   }
 
   .nav-link {
-    flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-width: 0;
+    min-height: 2.35rem;
     padding: 0.48rem 0.66rem;
     font-size: 0.68rem;
     letter-spacing: 0.08em;
+    line-height: 1.2;
+    text-align: center;
+    white-space: normal;
   }
 
   .hero-section {

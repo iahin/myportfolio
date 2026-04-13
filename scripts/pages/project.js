@@ -82,6 +82,40 @@ function getGlanceRows(glance) {
   return rows;
 }
 
+function syncProjectSectionOrder(root = document) {
+  const mobileQuery = window.matchMedia("(max-width: 720px)");
+  const contentGrid = root.querySelector(".project-content-grid");
+  const primaryColumn = root.querySelector(".project-primary-column");
+  const sidebarColumn = root.querySelector(".project-sidebar-column");
+  const sections = {
+    glance: root.querySelector('[data-field="glanceSection"]'),
+    overview: root.querySelector('[data-field="overviewSection"]'),
+    technical: root.querySelector('[data-field="technicalSection"]'),
+    impact: root.querySelector('[data-field="impactSection"]'),
+    stacks: root.querySelector('[data-field="stacksSection"]'),
+    gallery: root.querySelector('[data-field="gallerySection"]')
+  };
+
+  if (!contentGrid || !primaryColumn || !sidebarColumn || Object.values(sections).some((section) => !section)) {
+    return;
+  }
+
+  if (mobileQuery.matches) {
+    contentGrid.append(
+      sections.glance,
+      sections.impact,
+      sections.overview,
+      sections.technical,
+      sections.stacks,
+      sections.gallery
+    );
+    return;
+  }
+
+  primaryColumn.append(sections.overview, sections.technical, sections.gallery);
+  sidebarColumn.append(sections.glance, sections.impact, sections.stacks);
+}
+
 async function loadProjectPage() {
   try {
     const [siteData, projectDetail] = await Promise.all([
@@ -297,6 +331,16 @@ function renderProjectPage(data, detail, slug) {
   }
 
   projectRoot.replaceChildren(fragment);
+  syncProjectSectionOrder(projectRoot);
+
+  const mobileOrderQuery = window.matchMedia("(max-width: 720px)");
+  const handleViewportChange = () => syncProjectSectionOrder(projectRoot);
+  if (typeof mobileOrderQuery.addEventListener === "function") {
+    mobileOrderQuery.addEventListener("change", handleViewportChange);
+  } else if (typeof mobileOrderQuery.addListener === "function") {
+    mobileOrderQuery.addListener(handleViewportChange);
+  }
+
   trackProjectView(detail.title, slug, { page_type: "project_detail" });
   observeSectionViews(projectRoot.querySelectorAll("[data-analytics-section]"), {
     page_type: "project_detail",
