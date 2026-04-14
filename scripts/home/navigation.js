@@ -24,7 +24,36 @@ function syncNavigationOffset(root = document) {
 }
 
 export function renderNavigation(fragment, data) {
+  const navShell = fragment.querySelector(".top-nav-inner");
   const navRoot = fragment.querySelector('[data-field="navLinks"]');
+  if (!navShell || !navRoot) {
+    return;
+  }
+
+  const titleWrap = document.createElement("div");
+  titleWrap.className = "nav-mobile-summary";
+
+  const currentTitle = document.createElement("span");
+  currentTitle.className = "nav-current-title";
+  titleWrap.append(currentTitle);
+
+  const toggle = document.createElement("button");
+  toggle.type = "button";
+  toggle.className = "nav-toggle";
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.setAttribute("aria-label", "Open navigation menu");
+
+  for (let index = 0; index < 3; index += 1) {
+    const bar = document.createElement("span");
+    bar.className = "nav-toggle-bar";
+    toggle.append(bar);
+  }
+
+  navRoot.id = "site-nav-drawer";
+  toggle.setAttribute("aria-controls", navRoot.id);
+  navShell.insertBefore(titleWrap, navRoot);
+  navShell.insertBefore(toggle, navRoot);
+
   data.navigation.links.forEach((item, index) => {
     const link = document.createElement("a");
     link.href = navHrefForHome(item);
@@ -33,19 +62,37 @@ export function renderNavigation(fragment, data) {
     link.className = index === 0 ? "nav-link active" : "nav-link";
     navRoot.append(link);
   });
+
+  currentTitle.textContent = data.navigation.links[0]?.label || "";
 }
 
-function setActiveLink(links, href) {
+function setActiveLink(links, href, titleElement) {
+  const activeLink =
+    links.find((link) => link.dataset.sectionHref === href) ||
+    links.find((link) => link.classList.contains("active")) ||
+    links[0] ||
+    null;
+
   links.forEach((link) => {
-    link.classList.toggle("active", link.dataset.sectionHref === href);
+    link.classList.toggle("active", link === activeLink);
   });
+
+  if (titleElement && activeLink) {
+    titleElement.textContent = activeLink.textContent || "";
+  }
+
+  return activeLink;
 }
 
 export function attachNavigationState(root = document) {
   syncNavigationOffset(root);
 
+  const nav = root.querySelector(".top-nav") || document.querySelector(".top-nav");
   const links = [...root.querySelectorAll(".nav-links .nav-link")];
-  if (!links.length) {
+  const titleElement = root.querySelector(".nav-current-title") || document.querySelector(".nav-current-title");
+  const toggle = root.querySelector(".nav-toggle") || document.querySelector(".nav-toggle");
+  const mobileQuery = window.matchMedia("(max-width: 720px)");
+  if (!nav || !links.length) {
     return;
   }
 
@@ -55,6 +102,22 @@ export function attachNavigationState(root = document) {
     .filter(Boolean);
   let pendingHref = null;
   let pendingUntil = 0;
+  let drawerOpen = false;
+
+  const setDrawerOpen = (nextOpen) => {
+    drawerOpen = Boolean(nextOpen) && mobileQuery.matches;
+    nav.classList.toggle("is-drawer-open", drawerOpen);
+    document.body.classList.toggle("nav-drawer-open", drawerOpen);
+
+    if (toggle) {
+      toggle.setAttribute("aria-expanded", drawerOpen ? "true" : "false");
+      toggle.setAttribute("aria-label", drawerOpen ? "Close navigation menu" : "Open navigation menu");
+    }
+  };
+
+  const closeDrawer = () => {
+    setDrawerOpen(false);
+  };
 
   links.forEach((link) => {
     link.addEventListener("click", (event) => {
@@ -69,8 +132,9 @@ export function attachNavigationState(root = document) {
           });
           pendingHref = href;
           pendingUntil = Date.now() + 1200;
-          setActiveLink(links, href);
-          requestAnimationFrame(() => setActiveLink(links, href));
+          setActiveLink(links, href, titleElement);
+          requestAnimationFrame(() => setActiveLink(links, href, titleElement));
+          closeDrawer();
 
           const navOffset = parseFloat(
             getComputedStyle(document.documentElement).getPropertyValue("--nav-offset")
@@ -87,13 +151,18 @@ export function attachNavigationState(root = document) {
           destination_section: href.replace(/^#/, "")
         });
       }
-      setActiveLink(links, href);
+      setActiveLink(links, href, titleElement);
+      closeDrawer();
     });
+  });
+
+  toggle?.addEventListener("click", () => {
+    setDrawerOpen(!drawerOpen);
   });
 
   const applyFromHash = () => {
     const hash = window.location.hash || "#top";
-    setActiveLink(links, hash);
+    setActiveLink(links, hash, titleElement);
   };
 
   const findActiveSection = (sections, navOffset) => {
@@ -135,7 +204,7 @@ export function attachNavigationState(root = document) {
     if (scrollBottom >= documentBottom - 24) {
       const lastSection = sections[sections.length - 1];
       if (lastSection?.id) {
-        setActiveLink(links, `#${lastSection.id}`);
+        setActiveLink(links, `#${lastSection.id}`, titleElement);
       }
       return;
     }
@@ -147,7 +216,7 @@ export function attachNavigationState(root = document) {
       if (pendingSection) {
         const pendingRect = pendingSection.getBoundingClientRect();
         if (pendingRect.top > navOffset + 12 || pendingRect.bottom <= navOffset + 12) {
-          setActiveLink(links, pendingHref);
+          setActiveLink(links, pendingHref, titleElement);
           return;
         }
       }
@@ -159,15 +228,45 @@ export function attachNavigationState(root = document) {
     }
 
     if (activeSection?.id) {
-      setActiveLink(links, `#${activeSection.id}`);
+      setActiveLink(links, `#${activeSection.id}`, titleElement);
     }
   };
 
   window.addEventListener("hashchange", applyFromHash);
   window.addEventListener("scroll", updateFromScroll, { passive: true });
   window.addEventListener("resize", () => {
+    if (!mobileQuery.matches) {
+      closeDrawer();
+    }
     syncNavigationOffset(root);
     updateFromScroll();
+  });
+
+  mobileQuery.addEventListener?.("change", () => {
+    if (!mobileQuery.matches) {
+      closeDrawer();
+    }
+    syncNavigationOffset(root);
+    updateFromScroll();
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!drawerOpen || !mobileQuery.matches) {
+      return;
+    }
+
+    const target = event.target;
+    if (!(target instanceof Node) || nav.contains(target)) {
+      return;
+    }
+
+    closeDrawer();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeDrawer();
+    }
   });
 
   document.fonts?.ready
