@@ -32,6 +32,28 @@ export function renderHero(fragment, data) {
         statsRoot.append(divider);
       }
     });
+
+    const heroBody = statsRoot.closest(".hero-body");
+    const heroVisual = fragment.querySelector(".hero-visual");
+    const mobileStatsQuery = window.matchMedia("(max-width: 720px)");
+
+    const syncHeroStatsPosition = () => {
+      if (!heroBody || !heroVisual) return;
+
+      if (mobileStatsQuery.matches) {
+        heroVisual.append(statsRoot);
+      } else {
+        heroBody.append(statsRoot);
+      }
+    };
+
+    syncHeroStatsPosition();
+
+    if (typeof mobileStatsQuery.addEventListener === "function") {
+      mobileStatsQuery.addEventListener("change", syncHeroStatsPosition);
+    } else if (typeof mobileStatsQuery.addListener === "function") {
+      mobileStatsQuery.addListener(syncHeroStatsPosition);
+    }
   }
 
 }
