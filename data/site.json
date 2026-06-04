@@ -82,35 +82,40 @@
     "groups": [
       {
         "title": "Languages & Frameworks",
-        "summary": "My core day-to-day development tools across backend and full-stack work.",
+        "summary": "Core programming languages, application frameworks, and frontend tools used across backend and full-stack development.",
         "items": [
           { "label": "Python", "icon": "python" },
           { "label": "FastAPI", "icon": "fastapi" },
           { "label": "Django", "icon": "django" },
+          { "label": "Java", "icon": "java" },
           { "label": "JavaScript", "icon": "javascript" },
           { "label": "TypeScript", "icon": "typescript" },
           { "label": "Node.js", "icon": "nodejs" },
           { "label": "Next.js", "icon": "nextjs" },
           { "label": "React", "icon": "react" },
+          { "label": ".NET", "icon": "dotnet" },
+          { "label": "C#", "icon": "csharp" },
+          { "label": "SQL", "icon": "sql" },
           { "label": "Tailwind CSS", "icon": "tailwind" },
           { "label": "HTML", "icon": "html" },
           { "label": "CSS", "icon": "css" }
         ]
       },
       {
-        "title": "Backend & APIs",
+        "title": "Backend, APIs & Services",
         "summary": "Architectures and integration patterns I use to build reliable application services.",
         "items": [
           { "label": "REST APIs", "icon": "api" },
           { "label": "Microservices", "icon": "microservices" },
           { "label": "JWT Auth", "icon": "security" },
-          { "label": "Backend Architecture", "icon": "architecture" },
           { "label": "Nginx", "icon": "nginx" },
-          { "label": "QDrant", "icon": "qdrant" }
+          { "label": "Service Design", "icon": "architecture" },
+          { "label": "API Design", "icon": "api" },
+          { "label": "Authentication & Authorization", "icon": "security" }
         ]
       },
       {
-        "title": "Databases & Delivery",
+        "title": "Databases, Cloud & Delivery",
         "summary": "Data and deployment tooling used to keep systems fast, stable, and operable.",
         "items": [
           { "label": "PostgreSQL", "icon": "postgresql" },
@@ -120,23 +125,27 @@
           { "label": "Query Optimisation", "icon": "query" },
           { "label": "Docker", "icon": "docker" },
           { "label": "GitHub Actions", "icon": "github" },
+          { "label": "Jenkins", "icon": "jenkins" },
+          { "label": "Azure DevOps suite", "icon": "azuredevops" },
+          { "label": "GitLab CI/CD", "icon": "gitlab" },
           { "label": "AWS", "icon": "aws" },
-          { "label": "Azure VMs", "icon": "azure" },
-          { "label": "CI/CD", "icon": "cicd" }
+          { "label": "Azure", "icon": "azure" }
         ]
       },
       {
-        "title": "AI & Frontend",
-        "summary": "Applied AI and product-layer tools I use when the system needs a complete end-to-end implementation.",
+        "title": "AI & Applied ML",
+        "summary": "Tools and techniques I use for retrieval, language workflows, and model-backed systems.",
         "items": [
           { "label": "OpenAI API", "icon": "openai" },
           { "label": "LangChain", "icon": "langchain" },
-          { "label": "RAG workflows", "icon": "rag" },
+          { "label": "Qdrant", "icon": "qdrant" },
+          { "label": "Retrieval Augmented Generation (RAG)", "icon": "rag" },
           { "label": "Prompt Engineering", "icon": "prompt" },
-          { "label": "NLP", "icon": "nlp" },
+          { "label": "Natural Language Processing", "icon": "nlp" },
+          { "label": "Guardrails", "icon": "guardrails" },
           { "label": "NVIDIA NIM", "icon": "nvidia" },
           { "label": "PyTorch", "icon": "pytorch" },
-          { "label": "Huggingface", "icon": "huggingface" }
+          { "label": "Hugging Face", "icon": "huggingface" }
         ]
       }
     ]
